@@ -555,7 +555,27 @@
         <div class="center1_left">
             <img src="{% static 'img/content/ji1.jpg' %}">
         </div>
-        <div class="center1_right">
+        <div class="center1_right" style="overflow: hidden;">
+            {% for p in data.dailysurprise %}
+{#                <div style="display: none;">#}
+                <div>
+                    <div class="time_list">
+                        <img src="{{ p.img }}">
+                        <p>{{ p.name }}</p>
+                        <a href="#">
+                            <strong>
+                                <h2>{{ p.price }}</h2>
+                                <i>{{ p.preprice }}</i>
+                                <em>{{ p.activity }}</em>
+                            </strong>
+                            <span>{{ p.span }}</span>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+
         </div>
     </div>
 
@@ -608,7 +628,13 @@
             </div>
             <div class="center3b_right mm">
                 <ul id="center3_con">
-
+                    {% for g in data.goods_list.goods0 %}
+                        <li class="content_main">
+                            <img src="{{ g.img }}">
+                            <p>{{ g.name }}</p>
+                            <span>{{ g.price }}</span>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -648,8 +674,13 @@
             </div>
             <div class="center4b_right mm">
                 <ul id="center4_con">
-
-
+                    {% for g in data.goods_list.goods1 %}
+                        <li class="content_main">
+                            <img src="{{ g.img }}">
+                            <p>{{ g.name }}</p>
+                            <span>{{ g.price }}</span>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -689,8 +720,13 @@
             </div>
             <div class="center5b_right mm">
                 <ul id="center5_con">
-
-
+                    {% for g in data.goods_list.goods2 %}
+                        <li class="content_main">
+                            <img src="{{ g.img }}">
+                            <p>{{ g.name }}</p>
+                            <span>{{ g.price }}</span>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -726,7 +762,13 @@
             </div>
             <div class="center6b_right mm">
                 <ul id="center6_con">
-
+                    {% for g in data.goods_list.goods3 %}
+                        <li class="content_main">
+                            <img src="{{ g.img }}">
+                            <p>{{ g.name }}</p>
+                            <span>{{ g.price }}</span>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -770,7 +812,13 @@
             </div>
             <div class="center7b_right mm">
                 <ul id="center7_con">
-
+                    {% for g in data.goods_list.goods4 %}
+                        <li class="content_main">
+                            <img src="{{ g.img }}">
+                            <p>{{ g.name }}</p>
+                            <span>{{ g.price }}</span>
+                        </li>
+                    {% endfor %}
 
                 </ul>
             </div>
@@ -815,7 +863,13 @@
             </div>
             <div class="center8b_right mm">
                 <ul id="center8_con">
-
+                    {% for g in data.goods_list.goods5 %}
+                        <li class="content_main">
+                            <img src="{{ g.img }}">
+                            <p>{{ g.name }}</p>
+                            <span>{{ g.price }}</span>
+                        </li>
+                    {% endfor %}
 
                 </ul>
             </div>
