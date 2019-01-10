@@ -1,12 +1,17 @@
 from django.shortcuts import render
 
-from app.models import Banner
+from app.models import Banner, Recommendation
 
 
 def homepage(request):
     banners = Banner.objects.all()
+    recommendations = Recommendation.objects.all()
+    data = {
+        'banners': banners,
+        'recommendations': recommendations,
+    }
 
-    return render(request, 'homepage.html', context={'banners': banners})
+    return render(request, 'homepage.html', context={'data': data})
 
 
 def register(request):

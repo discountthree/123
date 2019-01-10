@@ -1,12 +1,14 @@
 $(function () {
+        // swiper pagination初始化
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
         paginationClickable: true,
         spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: 2500,
+        loop: true,
+        autoplay : 2500,
         autoplayDisableOnInteraction: false
     });
 })

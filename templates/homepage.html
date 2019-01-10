@@ -384,11 +384,9 @@
             <ul id="banner_ul">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            {% for banner in banners %}
-                                <li><img src="{{ banner.img }}"></li>
-                            {% endfor %}
-                        </div>
+                        {% for banner in data.banners %}
+                            <div class="swiper-slide"><img src="{{ banner.img }}"></div>
+                        {% endfor %}
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -408,7 +406,6 @@
                 <li><img src="{% static 'img/homepage/ec34cdb14e0db752caa81fd7f7f379e3.jpg' %}"></li>
             </ul>
         </div>
-
 
     </div>
 </div>
@@ -559,15 +556,25 @@
             <img src="{% static 'img/content/ji1.jpg' %}">
         </div>
         <div class="center1_right">
-
         </div>
-
     </div>
 
     <div class="content_center2">
         <p>E仔今天推荐了哪些精品？</p>
         <div class="center2_main">
-
+            {% for recommendation in data.recommendations %}
+                <div class="center2_con">
+                    <img src="{{ recommendation.img }}">
+                    <span>
+                        <h5>{{ recommendation.name }}</h5>
+                        <em>
+                            <i>{{ recommendation.price }}</i>
+                            <b>{{ recommendation.reason }}</b>
+                        </em>
+                        <p>{{ recommendation.p }}</p>
+                    </span>
+                </div>
+            {% endfor %}
         </div>
     </div>
 
