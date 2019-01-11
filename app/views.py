@@ -37,3 +37,5 @@ def login(request):
 
 def shopcar(request):
     return render(request, 'shopcar.html')
+
+

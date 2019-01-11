@@ -10,13 +10,9 @@
     <link rel="stylesheet" href="{% static 'css/register.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/jquery.idcode.css' %}"/>
 
-
     <script type="text/javascript" src="{% static 'js/jquery-1.12.3.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery.idcode.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/register.js' %}"></script>
-
-    {#    <script type="text/javascript" src="{% static 'js/what.js' %}"></script>#}
 
 </head>
 <body>
@@ -49,17 +45,10 @@
 
             <div class="text">
                 <span>验证码：</span>
-
-                <input type="text" id="Txtidcode" class="txtVerification"><span id="idcode"><div id="ehong-code"
-                                                                                                 class="ehong-idcode-val ehong-idcode-val0"
-                                                                                                 href="#"
-                                                                                                 onblur="return false"
-                                                                                                 onfocus="return false"
-                                                                                                 oncontextmenu="return false"
-                                                                                                 onclick="$.idcode.setCode()"><font
+                <input type="text" id="Txtidcode" class="txtVerification"><span id="idcode"><div id="ehong-code" class="ehong-idcode-val ehong-idcode-val0"
+                       href="#" onblur="return false" onfocus="return false" oncontextmenu="return false" onclick="$.idcode.setCode()"><font
                     color="#D6A03C">B</font><font color="#707F02">2</font><font color="#90719B">F</font><font
-                    color="#16BDB5">6</font></div><span id="ehong-code-tip-ck" class="ehong-code-val-tip"
-                                                        onclick="$.idcode.setCode()"></span></span>
+                    color="#16BDB5">6</font></div><span id="ehong-code-tip-ck" class="ehong-code-val-tip" onclick="$.idcode.setCode()"></span></span>
                 <input type="button" class="btn" value="换一换">
                 <em class="right2"><img src="{% static 'img/register/ok_03.jpg' %}"></em>
                 <i class="right2_num">请输入4位验证码</i>
