@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8"/>
     <title></title>
+
     <link rel="stylesheet" href="{% static 'css/common.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/goods2.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/goods.css' %}"/>
 
     <script type="text/javascript" src="{% static 'js/jquery-1.12.3.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
@@ -24,9 +25,18 @@
         </div>
         <div class="header_right">
             <ul>
-                <li><a href="#">[登录]</a></li>
-                <li><a href="#">[注册]</a></li>
-                <li><a href="shopcar.html">购物车</a></li>
+                {% if name %}
+                    <li style="color: #007aff">用户: {{ name }}</li>
+                    <li><a href="{% url 'app:logout' %}">退出</a></li>
+                    <li><a href="{% url 'app:shopcar' %}">购物车</a></li>
+                {% else %}
+                    <div>
+                        <li><a href="{% url 'app:login' %}">[登录]</a></li>
+                        <li><a href="{% url 'app:register' %}">[注册]</a></li>
+                        <li><a href="{% url 'app:login' %}">购物车</a></li>
+                    </div>
+                {% endif %}
+
                 <li id="mypet">
                     <a href="#">我的E宠<img src="{% static 'img/common_img/h5.gif' %}"></a>
                     <div class="mypet">
@@ -43,7 +53,7 @@
                         <input type="button" value="保存到桌面" class="save">
                     </div>
                 </li>
-                <li><a href="#">手机版</a></li>
+                <li style="background: none"><a href="{% url 'app:homepage' 0 %}">首页</a></li>
                 <li><a href="#">帮助</a></li>
                 <li><a href="#" class="lastli">投诉建议</a></li>
             </ul>
@@ -154,15 +164,14 @@
         <div class="goodscar">
             <div class="glass">
                 <div id="smallImg">
-                    <div id="smallArea"></div>
+                    <img src="{{ goods.img }}" alt="">
                 </div>
 
                 <div class="img_list">
-                    <img src="{% static 'img/goods/4cdc82ffc0179dd4a7ce1d5a43e7577d.jpg@!100w-c.jpg' %}"
-                         class="goodsImg">
-                    <img src="{% static 'img/goods/3c8abe86e83e69031659319e5f7cb00d.jpg@!100w-c.jpg' %}">
-                    <img src="{% static 'img/goods/5cf537fae09153aea8a5f1f486486478.jpg@!100w-c.jpg' %}">
-                    <img src="{% static 'img/goods/a597986177fd4bc98d9e49f4bf26da0a.jpg-200-200.jpg' %}">
+                     <img src="{{ goods.img }}" alt="">
+                     <img src="{{ goods.img }}" alt="">
+                     <img src="{{ goods.img }}" alt="">
+                     <img src="{{ goods.img }}" alt="">
                 </div>
                 <div class="enjoin">
                     <a href="#">分享</a>
@@ -173,24 +182,24 @@
 
             <div class="info">
                 <div id="bigArea">
-                    <img id="bigImg" src="{% static 'img/goods/4cdc82ffc0179dd4a7ce1d5a43e7577d.jpg' %}">
+                    <img id="bigImg" src="{% static 'img/goods/1726c8e64575c7ee8e87168120d59479_看图王.jpg' %}">
                 </div>
                 <div class="info_con">
-                    <h3 class="goodsName">亚禾YaHo 快乐农夫 洁齿绳 鸡肉味 107g 长约12cm</h3>
+                    <h3 class="goodsName">2012新品 美国DEXAS 无腿双碗 大号粉色 外出必备 </h3>
                     <div class="price">
                         <div class="pre_price">
                             <span>市面价：</span>
-                            <i class="goodsPrice">￥94.2</i>
+                            <i class="goodsPrice">{{ goods.preprice }}</i>
                         </div>
                         <div class="now_price">
                             <span>E宠价：</span>
-                            <i>￥66.5</i>
+                            <i>{{ goods.price }}</i>
                         </div>
                     </div>
 
                     <div class="goods_num">
-                        <div class="num1"><span>编号：</span>9823</div>
-                        <div class="num1"><span>已售：</span>27个</div>
+                        <div class="num1"><span>编号：</span>1323</div>
+                        <div class="num1"><span>已售：</span>17个</div>
                         <div class="num1"><span>赠送：</span>最多赠送8E宠币</div>
                         <div class="num1">
                             <span>互动：</span>
@@ -211,12 +220,11 @@
                     <div class="size">
                         <div class="big">
                             <span>型号：</span>
-                            <a href="#">大包</a>
+                            <a href="#">大号</a>
                         </div>
                         <div class="color">
                             <span>颜色：</span>
-                            <a href="#">鸡肉</a>
-
+                            <a href="#">粉色</a>
                         </div>
                         <div class="buy">
                             <span>我要买：</span>

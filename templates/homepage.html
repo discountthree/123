@@ -12,7 +12,7 @@
     <script type="text/javascript" src="{% static 'js/jquery-1.12.3.js' %}"></script>
     <script src="{% static 'js/swiper-3.4.2.min.js' %}"></script>
     <script src="{% static 'js/banner.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/homepa.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/homepage.js' %}"></script>
 
 </head>
 <body>
@@ -29,15 +29,17 @@
         <div class="header_right">
             <ul>
                 {% if name %}
-                    <li>用户: {{ name }}</li>
+                    <li style="color: #007aff">用户: {{ name }}</li>
                     <li><a href="{% url 'app:logout' %}">退出</a></li>
+                    <li><a href="{% url 'app:shopcar' %}">购物车</a></li>
                 {% else %}
                     <div>
                         <li><a href="{% url 'app:login' %}">[登录]</a></li>
                         <li><a href="{% url 'app:register' %}">[注册]</a></li>
+                        <li><a href="{% url 'app:login' %}">购物车</a></li>
                     </div>
                 {% endif %}
-                <li><a href="{% url 'app:shopcar' %}">购物车</a></li>
+
                 <li id="mypet">
                     <a href="#">我的E宠<img src="{% static 'img/common_img/h5.gif' %}"></a>
                     <div class="mypet">
@@ -54,7 +56,7 @@
                         <input type="button" value="保存到桌面" class="save">
                     </div>
                 </li>
-                <li><a href="#">手机版</a></li>
+                {#                <li><a href="#">手机版</a></li>#}
                 <li><a href="#">帮助</a></li>
                 <li><a href="#" class="lastli">投诉建议</a></li>
             </ul>
@@ -503,48 +505,16 @@
             </div>
             <div class="ctb_right">
                 <ul>
-                    <li>
-                        <span>09:00</span>
-                        <i></i>
-                        <em></em>
-                        <b></b>
-                    </li>
-                    <li>
-                        <span>11:00</span>
-                        <i></i>
-                        <em></em>
-                        <b></b>
-                    </li>
-                    <li>
-                        <span>13:00</span>
-                        <i></i>
-                        <em></em>
-                        <b></b>
-                    </li>
-                    <li>
-                        <span>15:00</span>
-                        <i></i>
-                        <em></em>
-                        <b></b>
-                    </li>
-                    <li>
-                        <span>19:00</span>
-                        <i></i>
-                        <em></em>
-                        <b></b>
-                    </li>
-                    <li>
-                        <span>21:00</span>
-                        <i></i>
-                        <em></em>
-                        <b></b>
-                    </li>
-                    <li>
-                        <span>明日上线</span>
-                        <i></i>
-                        <em></em>
-                        <b></b>
-                    </li>
+                    {% for time in times %}
+                        <a href="{% url 'app:homepage' forloop.counter0 %}">
+                            <li>
+                                <span>{{ time }}</span>
+                                <i></i>
+                                <em></em>
+                                <b></b>
+                            </li>
+                        </a>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -554,23 +524,24 @@
         <div class="center1_left">
             <img src="{% static 'img/content/ji1.jpg' %}">
         </div>
-        <div class="center1_right" style="overflow: hidden;">
+        {#        <div class="center1_right" style="overflow: hidden;">#}
+        <div class="center1_right">
 
             {% for p in dailysurprise %}
-                <div>
-                    <div class="time_list">
-                        <a href="{% url 'app:goods' p.id %}">
-                            <img src="{{ p.img }}">
-                            <p>{{ p.name }}</p>
-                            <strong>
-                                <h2>{{ p.price }}</h2>
-                                <i>{{ p.preprice }}</i>
-                                <em>{{ p.activity }}</em>
-                            </strong>
-                            <span>{{ p.span }}</span>
-                        </a>
-                    </div>
+                {#                <div>#}
+                <div class="time_list">
+                    <a href="{% url 'app:goodsdetail' p.id %}">
+                        <img src="{{ p.img }}">
+                        <p>{{ p.name }}</p>
+                        <strong>
+                            <h2>{{ p.price }}</h2>
+                            <i>{{ p.preprice }}</i>
+                            <em>{{ p.activity }}</em>
+                        </strong>
+                        <span>{{ p.span }}</span>
+                    </a>
                 </div>
+                {#                </div>#}
             {% endfor %}
 
         </div>
@@ -579,16 +550,16 @@
     <div class="content_center2">
         <p>E仔今天推荐了哪些精品？</p>
         <div class="center2_main">
-            {% for recommendation in recommendations %}
+            {% for p in recommendations %}
                 <div class="center2_con">
-                    <img src="{{ recommendation.img }}">
+                    <img src="{{ p.img }}">
                     <span>
-                        <h5>{{ recommendation.name }}</h5>
+                        <h5>{{ p.name }}</h5>
                         <em>
-                            <i>{{ recommendation.price }}</i>
-                            <b>{{ recommendation.reason }}</b>
+                            <i>{{ p.price }}</i>
+                            <b>{{ p.reason }}</b>
                         </em>
-                        <p>{{ recommendation.p }}</p>
+                        <p>{{ p.p }}</p>
                     </span>
                 </div>
             {% endfor %}
@@ -626,11 +597,13 @@
             <div class="center3b_right mm">
                 <ul id="center3_con">
                     {% for g in goods_list.goods0 %}
-                        <li class="content_main">
-                            <img src="{{ g.img }}">
-                            <p>{{ g.name }}</p>
-                            <span>{{ g.price }}</span>
-                        </li>
+                        <a href="{% url 'app:goods2' g.id %}">
+                            <li class="content_main">
+                                <img src="{{ g.img }}">
+                                <p>{{ g.name }}</p>
+                                <span>{{ g.price }}</span>
+                            </li>
+                        </a>
                     {% endfor %}
                 </ul>
             </div>
@@ -672,6 +645,7 @@
             <div class="center4b_right mm">
                 <ul id="center4_con">
                     {% for g in goods_list.goods1 %}
+                        <a href="{% url 'app:goods2' g.id %}">
                         <li class="content_main">
                             <img src="{{ g.img }}">
                             <p>{{ g.name }}</p>
@@ -718,6 +692,7 @@
             <div class="center5b_right mm">
                 <ul id="center5_con">
                     {% for g in goods_list.goods2 %}
+                        <a href="{% url 'app:goods2' g.id %}">
                         <li class="content_main">
                             <img src="{{ g.img }}">
                             <p>{{ g.name }}</p>
@@ -760,6 +735,7 @@
             <div class="center6b_right mm">
                 <ul id="center6_con">
                     {% for g in goods_list.goods3 %}
+                        <a href="{% url 'app:goods2' g.id %}">
                         <li class="content_main">
                             <img src="{{ g.img }}">
                             <p>{{ g.name }}</p>
@@ -810,6 +786,7 @@
             <div class="center7b_right mm">
                 <ul id="center7_con">
                     {% for g in goods_list.goods4 %}
+                        <a href="{% url 'app:goods2' g.id %}">
                         <li class="content_main">
                             <img src="{{ g.img }}">
                             <p>{{ g.name }}</p>
@@ -861,6 +838,7 @@
             <div class="center8b_right mm">
                 <ul id="center8_con">
                     {% for g in goods_list.goods5 %}
+                        <a href="{% url 'app:goods2' g.id %}">
                         <li class="content_main">
                             <img src="{{ g.img }}">
                             <p>{{ g.name }}</p>

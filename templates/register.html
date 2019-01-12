@@ -24,10 +24,7 @@
             <span class="register"><img src="{% static 'img/register/welcome_07.jpg' %}">	</span>
         </div>
         <div class="registerhc_right">
-					<span>
-						<i>已有账号?</i>
-						<a href="{% url 'app:login' %}">登录</a>
-					</span>
+
         </div>
     </div>
 </div>
@@ -36,18 +33,21 @@
     <div class="registerm_con">
         <div class="login">
             <div class="text">
-                <p id="p1"><a href="#">首页</a></p>
-                <p id="p2"><a href="#">已有账号,去登录</a></p>
+                <p id="p1"><a href="{% url 'app:homepage' 0 %}">首页</a></p>
+                <p id="p2"><a href="{% url 'app:login' %}">已有账号,去登录</a></p>
             </div>
             <form action="{% url 'app:register' %}" method="post">
                 {% csrf_token %}
                 <div class="text">
-                    <span>注册账号：</span>
+                    <span>注册用户名：</span>
                     <input type="text" placeholder="用户名(长度6~20),字母/数字/字母和数字..." name="name">
+                    {% if err1 %}
+                        <span style="color: red;">{{ err1 }}</span>
+                    {% endif %}
                 </div>
                 <div class="text">
                     <span>邮箱：</span>
-                    <input type="text" placeholder="用户名(长度6~20),字母/数字/字母和数字..." name="name">
+                    <input type="text" placeholder="邮箱,如1@qqcom" name="email">
                 </div>
                 <div class="text">
                     <span>设置密码：</span>
@@ -56,6 +56,9 @@
                 <div class="text">
                     <span>验证密码：</span>
                     <input type="password" placeholder="两次密码需保持一致" name="password2">
+                    {% if err2 %}
+                        <span style="color: red;">{{ err2 }}</span>
+                    {% endif %}
                 </div>
                 <div class="text">
                     <span></span>

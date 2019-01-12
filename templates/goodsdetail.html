@@ -25,9 +25,18 @@
         </div>
         <div class="header_right">
             <ul>
-                <li><a href="#">[登录]</a></li>
-                <li><a href="#">[注册]</a></li>
-                <li><a href="shopcar.html">购物车</a></li>
+                {% if name %}
+                    <li style="color: #007aff">用户: {{ name }}</li>
+                    <li><a href="{% url 'app:logout' %}">退出</a></li>
+                    <li><a href="{% url 'app:shopcar' %}">购物车</a></li>
+                {% else %}
+                    <div>
+                        <li><a href="{% url 'app:login' %}">[登录]</a></li>
+                        <li><a href="{% url 'app:register' %}">[注册]</a></li>
+                        <li><a href="{% url 'app:login' %}">购物车</a></li>
+                    </div>
+                {% endif %}
+
                 <li id="mypet">
                     <a href="#">我的E宠<img src="{% static 'img/common_img/h5.gif' %}"></a>
                     <div class="mypet">
@@ -44,7 +53,7 @@
                         <input type="button" value="保存到桌面" class="save">
                     </div>
                 </li>
-                <li><a href="#">手机版</a></li>
+                <li style="background: none"><a href="{% url 'app:homepage' 0 %}">首页</a></li>
                 <li><a href="#">帮助</a></li>
                 <li><a href="#" class="lastli">投诉建议</a></li>
             </ul>

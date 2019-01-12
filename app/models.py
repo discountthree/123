@@ -1,10 +1,16 @@
 from django.db import models
 
 
-# Create your models here.
+# 轮播图
 class Banner(models.Model):
     img = models.CharField(max_length=100)
 
+# 用户
+class User(models.Model):
+    name = models.CharField(max_length=40)
+    email = models.CharField(max_length=40)
+    password = models.CharField(max_length=40)
+    token = models.CharField(max_length=256)
 
 # 天天惊喜
 class DailySurprise(models.Model):
@@ -32,8 +38,9 @@ class Goods(models.Model):
     price = models.CharField(max_length=20)
 
 
-class User(models.Model):
-    name = models.CharField(max_length=40)
-    email = models.CharField(max_length=40)
-    password = models.CharField(max_length=40)
-    token = models.CharField(max_length=256)
+# 购物车
+class shopcar(models.Model):
+    user = models.ForeignKey(User)
+    goods = models.ForeignKey(DailySurprise)
+    num = models.IntegerField()
+    is_delete = models.BooleanField(default=True)

@@ -32,7 +32,7 @@
         <div class="login_con">
             <div class="login_main">
                 <div class="login_tab">
-                    <p><a href="{% url 'app:homepage' %}"> 首页 </a></p>
+                    <p><a href="{% url 'app:homepage' 0 %}"> 首页 </a></p>
                     <p><a href="{% url 'app:register' %}"> 无账号,去注册 </a></p>
                 </div>
                 <form action="{% url 'app:login' %}" method="post">
@@ -47,6 +47,9 @@
                             <input type="password" placeholder="密码" name="password"/>
                         </div>
                     </div>
+                    {% if err %}
+                        <p style="color: red">{{ err }}</p>
+                    {% endif %}
                     <div class="check">
 							<span>
 								<input type="checkbox"/>
@@ -58,6 +61,7 @@
                         <input type="submit" value="登录"/>
                     </div>
                 </form>
+
 
                 <div class="link">
 							<span>
