@@ -2171,4 +2171,29 @@
     color: #666;
 }
 
+.banner {
+    width: 770px;
+    height: 360px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
 
+.swiper-button-prev {
+    display: none;
+}
+
+.swiper-button-next {
+    display: none;
+}
+
+.swiper-pagination-bullet span {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-container span {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}

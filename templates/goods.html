@@ -155,15 +155,14 @@
         <div class="goodscar">
             <div class="glass">
                 <div id="smallImg">
-                    <div id="smallArea"></div>
+                    <img src="{{ goods.img }}" alt="">
                 </div>
 
                 <div class="img_list">
-                    <img src="{% static 'img/goods/91a509803c440df0ef472911c63f84f0.jpg@!100w-c.jpg' %}"
-                         class="goodsImg">
-                    <img src="{% static 'img/goods/1726c8e64575c7ee8e87168120d59479.jpg@!100w-c.jpg' %}">
-                    <img src="{% static 'img/goods/91a509803c440df0ef472911c63f84f0.jpg@!100w-c.jpg' %}">
-                    <img src="{% static 'img/goods/1726c8e64575c7ee8e87168120d59479.jpg@!100w-c.jpg' %}">
+                     <img src="{{ goods.img }}" alt="">
+                     <img src="{{ goods.img }}" alt="">
+                     <img src="{{ goods.img }}" alt="">
+                     <img src="{{ goods.img }}" alt="">
                 </div>
                 <div class="enjoin">
                     <a href="#">分享</a>
@@ -181,11 +180,11 @@
                     <div class="price">
                         <div class="pre_price">
                             <span>市面价：</span>
-                            <i class="goodsPrice">￥58.9</i>
+                            <i class="goodsPrice">{{ goods.preprice }}</i>
                         </div>
                         <div class="now_price">
                             <span>E宠价：</span>
-                            <i>￥44.40</i>
+                            <i>{{ goods.price }}</i>
                         </div>
                     </div>
 

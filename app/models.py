@@ -30,3 +30,10 @@ class Goods(models.Model):
     img = models.CharField(max_length=100)
     name = models.CharField(max_length=100)
     price = models.CharField(max_length=20)
+
+
+class User(models.Model):
+    name = models.CharField(max_length=40)
+    email = models.CharField(max_length=40)
+    password = models.CharField(max_length=40)
+    token = models.CharField(max_length=256)
