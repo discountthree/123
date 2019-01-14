@@ -132,18 +132,17 @@ def shopcar(request):
 
 # 商品详情
 def goodsdetail(request, goodsid):
-    goods = DailySurprise.objects.get(id=goodsid)
-    shopcar = Shopcar.objects.get(goodsid=goodsid)
-    if shopcar:
-        num = shopcar.num
-        data = {
-            'goods': goods,
-            'num': num,
-        }
+    goods = DailySurprise.objects.get(pk=goodsid)
+    shopcar = Shopcar.objects.filter(goods=goods)
+    data = {}
+    if shopcar.count():
+        num = shopcar.first().num
+        data['goods'] = goods
+        data['num'] = num
+
     else:
-        data = {
-            'goods': goods,
-        }
+        data['goods'] = goods
+        data['num'] = 0
     token = request.session.get('token')
     if token:
         user = User.objects.get(token=token)

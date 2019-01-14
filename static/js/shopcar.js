@@ -1,8 +1,14 @@
 $(function () {
 
-    // 默认减号和数字隐藏
-    $('#minus').hide();
-    $('#num').hide();
+    // 减号和数字隐
+    var num = parseInt($('#num').html());
+    if (num <= 0) {
+        $('#minus').hide();
+        $('#num').hide();
+    } else {
+        $('#minus').show();
+        $('#num').show();
+    }
 
 
     // 加操作

@@ -233,11 +233,7 @@
                             {#                            <input type="text" value="0" class="goodsNum">#}
                             {#                            <a href="#" class="add">+</a>个#}
                             <span id="minus" goodsid="{{ goods.id }}">-</span>
-                            {% if num %}
-                                <span id="num">{{ num }}</span>
-                            {% else %}
-                                <span id="num">0</span>
-                            {% endif %}
+                            <span id="num">{{ num }}</span>
                             <span id="plus" goodsid="{{ goods.id }}">+</span>
                         </div>
                     </div>
