@@ -6,10 +6,11 @@
     <title></title>
 
     <link rel="stylesheet" href="{% static 'css/common.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/goods.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/goodsdetail.css' %}"/>
 
     <script type="text/javascript" src="{% static 'js/jquery-1.12.3.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/shopcar.js' %}"></script>
 
 </head>
 <body>
@@ -168,10 +169,10 @@
                 </div>
 
                 <div class="img_list">
-                     <img src="{{ goods.img }}" alt="">
-                     <img src="{{ goods.img }}" alt="">
-                     <img src="{{ goods.img }}" alt="">
-                     <img src="{{ goods.img }}" alt="">
+                    <img src="{{ goods.img }}" alt="">
+                    <img src="{{ goods.img }}" alt="">
+                    <img src="{{ goods.img }}" alt="">
+                    <img src="{{ goods.img }}" alt="">
                 </div>
                 <div class="enjoin">
                     <a href="#">分享</a>
@@ -227,11 +228,17 @@
                             <a href="#">粉色</a>
                         </div>
                         <div class="buy">
-                            <span>我要买：</span>
-                            <a href="#" class="minu">-</a>
-                            <input type="text" value="1" class="goodsNum">
-                            <a href="#" class="add">+</a>
-                            个
+                            <span>数量：</span>
+                            {#                            <a href="#" class="minu">-</a>#}
+                            {#                            <input type="text" value="0" class="goodsNum">#}
+                            {#                            <a href="#" class="add">+</a>个#}
+                            <span id="minus" goodsid="{{ goods.id }}">-</span>
+                            {% if num %}
+                                <span id="num">{{ num }}</span>
+                            {% else %}
+                                <span id="num">0</span>
+                            {% endif %}
+                            <span id="plus" goodsid="{{ goods.id }}">+</span>
                         </div>
                     </div>
                     <div class="order">

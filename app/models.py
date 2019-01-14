@@ -39,7 +39,7 @@ class Goods(models.Model):
 
 
 # 购物车
-class shopcar(models.Model):
+class Shopcar(models.Model):
     user = models.ForeignKey(User)
     goods = models.ForeignKey(DailySurprise)
     num = models.IntegerField()

@@ -1,9 +1,9 @@
 import hashlib
 import random
 import time
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
-from app.models import Banner, Recommendation, Goods, DailySurprise, User
+from app.models import Banner, Recommendation, Goods, DailySurprise, User, Shopcar
 
 
 # 首页
@@ -133,11 +133,17 @@ def shopcar(request):
 # 商品详情
 def goodsdetail(request, goodsid):
     goods = DailySurprise.objects.get(id=goodsid)
-
-    data = {
-        'goods': goods,
-    }
-
+    shopcar = Shopcar.objects.get(goodsid=goodsid)
+    if shopcar:
+        num = shopcar.num
+        data = {
+            'goods': goods,
+            'num': num,
+        }
+    else:
+        data = {
+            'goods': goods,
+        }
     token = request.session.get('token')
     if token:
         user = User.objects.get(token=token)
@@ -147,7 +153,7 @@ def goodsdetail(request, goodsid):
         return render(request, 'goodsdetail.html', context=data)
 
 
-def goodsdetail2(request,goodsid):
+def goodsdetail2(request, goodsid):
     goods = Goods.objects.get(id=goodsid)
 
     data = {
@@ -162,3 +168,61 @@ def goodsdetail2(request,goodsid):
     else:
         return render(request, 'goodsdetail2.html', context=data)
 
+
+def addshopcar(request):
+    token = request.session.get('token')
+    goodsid = request.GET.get('goodsid')
+    data = {}
+    # 登录状态
+    if token:
+        # 获取用户
+        user = User.objects.get(token=token)
+        # 获取商品
+        goods = DailySurprise.objects.get(pk=goodsid)
+        shopcars = Shopcar.objects.filter(user=user).filter(goods=goods)
+        # 商品已存在,只需修改数量
+        if shopcars.exists():
+            shopcar = shopcars.first()
+            shopcar.num = shopcar.num + 1
+            shopcar.save()
+        # 第一次添加商品
+        else:
+            shopcar = Shopcar()
+            shopcar.user = user
+            shopcar.goods = goods
+            shopcar.num = 1
+            shopcar.save()
+        return JsonResponse({
+            'msg': '添加: {}到购物车成功'.format(goods.name),
+            'num': shopcar.num,
+            'status': 1,
+        })
+    else:
+        data['msg'] = '请登录后操作'
+        data['status'] = -1
+        return JsonResponse(data)
+
+
+def delshopcar(request):
+    token = request.session.get('token')
+    goodsid = request.GET.get('goodsid')
+
+    user = User.objects.get(token=token)
+    goods = DailySurprise.objects.get(pk=goodsid)
+
+    shopcar = Shopcar.objects.filter(user=user).filter(goods=goods).first()
+    shopcar.num = shopcar.num - 1
+    data = {}
+    if shopcar.num > 0:
+        shopcar.save()
+        data['msg'] = '购物车删减成功'
+        data['status'] = 1
+        data['num'] = shopcar.num
+
+        return JsonResponse(data)
+    else:
+        shopcar.delete()
+        data['msg'] = '购物车删减成功'
+        data['status'] = 1
+        data['num'] = 0
+        return JsonResponse(data)

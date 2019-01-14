@@ -19,5 +19,9 @@ urlpatterns = [
     url(r'^login/$', views.login, name='login'),
     # 注销
     url(r'^logout/$', views.logout, name='logout'),
+    # 添加到购物车
+    url(r'^addshopcar/$', views.addshopcar, name='addshopcar'),
+    # 从购物车移除
+    url(r'^delshopcar/$', views.delshopcar, name='delshopcar'),
 
 ]
