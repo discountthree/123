@@ -11,6 +11,7 @@
 
     <script type="text/javascript" src="{% static 'js/jquery-1.12.3.js' %}"></script>
     <script src="{% static 'js/swiper-3.4.2.min.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
     <script src="{% static 'js/banner.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/homepage.js' %}"></script>
 
@@ -504,16 +505,17 @@
                 <img src="{% static 'img/content/day_surprises.jpg' %}">
             </div>
             <div class="ctb_right">
+{#            天天惊喜#}
                 <ul>
                     {% for time in times %}
-                        <a href="{% url 'app:homepage' forloop.counter0 %}">
-                            <li>
+                        <li class="ctb-li">
+                            <a href="{% url 'app:homepage' forloop.counter0 %}">
                                 <span>{{ time }}</span>
                                 <i></i>
                                 <em></em>
                                 <b></b>
-                            </li>
-                        </a>
+                            </a>
+                        </li>
                     {% endfor %}
                 </ul>
             </div>
@@ -526,9 +528,7 @@
         </div>
         {#        <div class="center1_right" style="overflow: hidden;">#}
         <div class="center1_right">
-
             {% for p in dailysurprise %}
-                {#                <div>#}
                 <div class="time_list">
                     <a href="{% url 'app:goodsdetail' p.id %}">
                         <img src="{{ p.img }}">
@@ -541,9 +541,7 @@
                         <span>{{ p.span }}</span>
                     </a>
                 </div>
-                {#                </div>#}
             {% endfor %}
-
         </div>
     </div>
 
@@ -597,7 +595,7 @@
             <div class="center3b_right mm">
                 <ul id="center3_con">
                     {% for g in goods_list.goods0 %}
-                        <a href="{% url 'app:goods2' g.id %}">
+                        <a href="{% url 'app:goodsdetail2' g.id %}">
                             <li class="content_main">
                                 <img src="{{ g.img }}">
                                 <p>{{ g.name }}</p>
@@ -645,7 +643,7 @@
             <div class="center4b_right mm">
                 <ul id="center4_con">
                     {% for g in goods_list.goods1 %}
-                        <a href="{% url 'app:goods2' g.id %}">
+                        <a href="{% url 'app:goodsdetail2' g.id %}">
                         <li class="content_main">
                             <img src="{{ g.img }}">
                             <p>{{ g.name }}</p>
@@ -692,7 +690,7 @@
             <div class="center5b_right mm">
                 <ul id="center5_con">
                     {% for g in goods_list.goods2 %}
-                        <a href="{% url 'app:goods2' g.id %}">
+                        <a href="{% url 'app:goodsdetail2' g.id %}">
                         <li class="content_main">
                             <img src="{{ g.img }}">
                             <p>{{ g.name }}</p>
@@ -735,7 +733,7 @@
             <div class="center6b_right mm">
                 <ul id="center6_con">
                     {% for g in goods_list.goods3 %}
-                        <a href="{% url 'app:goods2' g.id %}">
+                        <a href="{% url 'app:goodsdetail2' g.id %}">
                         <li class="content_main">
                             <img src="{{ g.img }}">
                             <p>{{ g.name }}</p>
@@ -786,14 +784,13 @@
             <div class="center7b_right mm">
                 <ul id="center7_con">
                     {% for g in goods_list.goods4 %}
-                        <a href="{% url 'app:goods2' g.id %}">
+                        <a href="{% url 'app:goodsdetail2' g.id %}">
                         <li class="content_main">
                             <img src="{{ g.img }}">
                             <p>{{ g.name }}</p>
                             <span>{{ g.price }}</span>
                         </li>
                     {% endfor %}
-
                 </ul>
             </div>
         </div>
@@ -838,14 +835,13 @@
             <div class="center8b_right mm">
                 <ul id="center8_con">
                     {% for g in goods_list.goods5 %}
-                        <a href="{% url 'app:goods2' g.id %}">
+                        <a href="{% url 'app:goodsdetail2' g.id %}">
                         <li class="content_main">
                             <img src="{{ g.img }}">
                             <p>{{ g.name }}</p>
                             <span>{{ g.price }}</span>
                         </li>
                     {% endfor %}
-
                 </ul>
             </div>
         </div>

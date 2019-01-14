@@ -1,30 +1,21 @@
 import hashlib
 import random
 import time
-
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-
 from app.models import Banner, Recommendation, Goods, DailySurprise, User
 
 
 # 首页
-def homepage(request, res=1):
+def homepage(request, liIndex):
     # 轮播数据
     banners = Banner.objects.all()
     # E仔推荐精品
     recommendations = Recommendation.objects.all()
     # 天天惊喜
-
-    if res == None:
-        i = 0
-    else:
-        i = int(res)
-    print(i, type(i))
-
-    # dailysurprise = DailySurprise.objects.all()[0:4]
+    liIndex = request.COOKIES.get('liIndex', 0)
+    i = int(liIndex)
     dailysurprise = DailySurprise.objects.all()[i * 4:(i + 1) * 4]
-
     # 商品展示
     goods_list = {}
     for i in range(0, 6):
@@ -113,7 +104,7 @@ def login(request):
             user.token = generate_token()
             user.save()
 
-            response = redirect('app:homepage')
+            response = redirect('app:homepage1')
             request.session['token'] = user.token
 
             return response
@@ -123,7 +114,7 @@ def login(request):
 
 # 退出登录
 def logout(request):
-    response = redirect('app:homepage')
+    response = redirect('app:homepage1')
     request.session.flush()
 
     return response
@@ -156,7 +147,7 @@ def goodsdetail(request, goodsid):
         return render(request, 'goodsdetail.html', context=data)
 
 
-def goods2(request,goodsid):
+def goodsdetail2(request,goodsid):
     goods = Goods.objects.get(id=goodsid)
 
     data = {
@@ -167,7 +158,7 @@ def goods2(request,goodsid):
     if token:
         user = User.objects.get(token=token)
         data['name'] = user.name
-        return render(request, 'goods2.html', context=data)
+        return render(request, 'goodsdetail2.html', context=data)
     else:
-        return render(request, 'goods2.html', context=data)
+        return render(request, 'goodsdetail2.html', context=data)
 
