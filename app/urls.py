@@ -23,4 +23,8 @@ urlpatterns = [
     url(r'^addshopcar/$', views.addshopcar, name='addshopcar'),
     # 从购物车移除
     url(r'^delshopcar/$', views.delshopcar, name='delshopcar'),
+    # 修改选中状态
+    url(r'^changestatus/$', views.changestatus, name='changestatus'),
+    # 全选或取消全选
+    url(r'^changeisall/$', views.changeisall, name='changeisall'),
 ]

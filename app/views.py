@@ -128,6 +128,7 @@ def shopcar(request):
             for i in shopcars:
                 goods = DailySurprise.objects.get(pk=i.goods_id)
                 goods.num = Shopcar.objects.get(goods_id=goods.id).num
+                goods.is_select = Shopcar.objects.get(goods_id=goods.id).is_select
                 # print(num)
                 goods_list.append(goods)
 
@@ -240,3 +241,41 @@ def delshopcar(request):
         data['status'] = 1
         data['num'] = 0
         return JsonResponse(data)
+
+
+def changestatus(request):
+    goodsid = request.GET.get('goodsid')
+    goods = Shopcar.objects.get(goods_id=goodsid)
+    goods.is_select = not goods.is_select
+    goods.save()
+
+    data = {
+        'msg': '状态修改成功',
+        'status': 1,
+        'is_select': goods.is_select
+    }
+    return JsonResponse(data)
+
+
+def changeisall(request):
+    token = request.session.get('token')
+    user = User.objects.get(token=token)
+    shopcars = Shopcar.objects.filter(user_id=user.id)
+
+    # 全选/取消全选
+    isall = request.GET.get('isall')
+    if isall == 'true':
+        isall = True
+    else:
+        isall = False
+
+    for shopcar in shopcars:
+        shopcar.is_select = isall
+        shopcar.save()
+
+    data = {
+        'msg': '全选/取消全选',
+        'status': 1
+    }
+
+    return JsonResponse(data)

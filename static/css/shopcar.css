@@ -270,6 +270,10 @@
     font-size: 14px;
 }
 
+.removeAll div {
+    float: left;
+}
+
 .removeAll a {
     color: #000;
     margin-left: 20px;
@@ -296,6 +300,7 @@
     font-size: 18px;
     color: #d4082a;
     margin-top: 20px;
+    width: 100px;
 }
 
 .count {
@@ -338,23 +343,44 @@
 }
 
 .list_ul div img {
-    height: 100%;
+    height: 100px;
+    line-height: 100px;
 }
 
 .list_ul div p {
-    height: 33%;
+    height: 33px;
+    margin: 0;
+    line-height: 33px;
 }
 
-.list_ul #forloop {
+.list_ul .forloop {
     text-align: center;
     width: 50px;
     line-height: 110px;
 }
 
-.list_ul #checkbox {
-    height: 100%;
+.list_ul .checkbox {
     width: 50px;
-    left: 50px;
     text-align: center;
     line-height: 110px;
+    margin: 0;
 }
+
+.no {
+    border: white 1px solid;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: navajowhite;
+    display: inline-block;
+}
+
+.glyphicon-ok {
+    color: orange;
+    border: white 1px solid;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: navajowhite;
+}
+

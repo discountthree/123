@@ -2,18 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="422e0c71-1e37-46e7-96f7-018f9398b0e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/js/goodsdetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/goodsdetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/goodsdetail.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/shopcar.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/shopcar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/shopcar.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/shopcar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/goodsdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/goodsdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/shopcar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shopcar.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,17 +56,58 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/shopcar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="109" column="44" selection-start-line="109" selection-start-column="44" selection-end-line="109" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.47330534">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="517">
+                  <caret line="280" column="29" lean-forward="true" selection-start-line="280" selection-start-column="29" selection-end-line="280" selection-end-column="29" />
+                  <folding>
+                    <element signature="e#0#14#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/shopcar.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="286">
+                  <caret line="117" column="47" lean-forward="true" selection-start-line="117" selection-start-column="47" selection-end-line="117" selection-end-column="47" />
+                  <folding>
+                    <element signature="n#head#0;n#html#0;n#!!top" />
+                    <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/static/js/shopcar.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="377">
+                  <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#729#1739#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -80,9 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>common.h</find>
-      <find>data</find>
-      <find>bann</find>
       <find>head_mi</find>
       <find>swiper-pagination</find>
       <find>11:</find>
@@ -110,6 +148,9 @@
       <find>shopcar_list</find>
       <find>print</find>
       <find>still</find>
+      <find>removeAll</find>
+      <find>units</find>
+      <find>checkbox</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -143,26 +184,26 @@
         <option value="$PROJECT_DIR$/static/js/homepage.js" />
         <option value="$PROJECT_DIR$/Epets/urls.py" />
         <option value="$PROJECT_DIR$/static/css/register.css" />
-        <option value="$PROJECT_DIR$/app/urls.py" />
         <option value="$PROJECT_DIR$/static/css/goodsdetail.css" />
-        <option value="$PROJECT_DIR$/static/css/shopcar.css" />
         <option value="$PROJECT_DIR$/app/models.py" />
-        <option value="$PROJECT_DIR$/static/js/shopcar.js" />
         <option value="$PROJECT_DIR$/static/js/register.js" />
-        <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/templates/register.html" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/templates/homepage.html" />
         <option value="$PROJECT_DIR$/templates/goodsdetail.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/app/urls.py" />
+        <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/templates/shopcar.html" />
+        <option value="$PROJECT_DIR$/static/css/shopcar.css" />
+        <option value="$PROJECT_DIR$/static/js/shopcar.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="385" />
-    <option name="y" value="48" />
-    <option name="width" value="1505" />
-    <option name="height" value="917" />
+    <option name="x" value="368" />
+    <option name="y" value="50" />
+    <option name="width" value="1545" />
+    <option name="height" value="824" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -228,11 +269,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/static/js" />
+      <recent name="$PROJECT_DIR$/static/css" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/static/json" />
-      <recent name="$PROJECT_DIR$/static/css" />
-      <recent name="$PROJECT_DIR$/static/js" />
-      <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -304,18 +345,18 @@
       <workItem from="1547524197006" duration="2052000" />
       <workItem from="1547527423009" duration="5463000" />
       <workItem from="1547536135470" duration="77000" />
-      <workItem from="1547536258849" duration="9852000" />
+      <workItem from="1547536258849" duration="25158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154666000" />
+    <option name="totallyTimeSpent" value="169972000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="385" y="48" width="1505" height="917" extended-state="0" />
+    <frame x="368" y="50" width="1545" height="824" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18026045" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19736053" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -329,13 +370,13 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.13324873" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2532374" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32729805" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.24468814" />
+      <window_info anchor="right" id="Database" order="3" weight="0.2440273" />
       <window_info anchor="right" id="SciView" order="4" weight="0.32847276" />
     </layout>
   </component>
@@ -489,27 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/shopcar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="315" column="1" lean-forward="true" selection-start-line="315" selection-start-column="1" selection-end-line="315" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/shopcar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/register.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="542">
@@ -552,26 +572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="83" column="27" lean-forward="true" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://9c5fbd7a-ef1a-4657-b9bb-9e1f212ea810/schema/epets/table/app_goods">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -580,20 +580,6 @@
       </provider>
     </entry>
     <entry file="das://9c5fbd7a-ef1a-4657-b9bb-9e1f212ea810/schema/epets/table/app_dailysurprise">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9c5fbd7a-ef1a-4657-b9bb-9e1f212ea810/schema/epets/table/app_shopcar">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9c5fbd7a-ef1a-4657-b9bb-9e1f212ea810/schema/epets/table/app_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -614,10 +600,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="4" column="542" lean-forward="true" selection-start-line="4" selection-start-column="542" selection-end-line="4" selection-end-column="542" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9c5fbd7a-ef1a-4657-b9bb-9e1f212ea810/schema/epets/table/app_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9c5fbd7a-ef1a-4657-b9bb-9e1f212ea810/schema/epets/table/app_shopcar">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="44" column="4" lean-forward="true" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="280" column="29" lean-forward="true" selection-start-line="280" selection-start-column="29" selection-end-line="280" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/shopcar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="365" column="13" selection-start-line="365" selection-start-column="13" selection-end-line="365" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/shopcar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="109" column="44" selection-start-line="109" selection-start-column="44" selection-end-line="109" selection-end-column="44" />
+        <state relative-caret-position="286">
+          <caret line="117" column="47" lean-forward="true" selection-start-line="117" selection-start-column="47" selection-end-line="117" selection-end-column="47" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/shopcar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+          <folding>
+            <element signature="e#729#1739#0" />
+          </folding>
         </state>
       </provider>
     </entry>
