@@ -73,18 +73,12 @@ def register(request):
             user = User()
             user.name = name
             user.email = request.POST.get('email')
-            password1 = generate_password(request.POST.get('password1'))
-            password2 = generate_password(request.POST.get('password2'))
-
-            if password1 == password2:
-                user.password = password1
-            else:
-                return render(request, 'register.html', context={'err2': '密码不一致'})
+            user.password = generate_password(request.POST.get('password1'))
             user.token = generate_token()
 
             user.save()
 
-            response = redirect('app:homepage')
+            response = redirect('app:homepage1')
             request.session['token'] = user.token
 
             return response
@@ -123,32 +117,53 @@ def logout(request):
 # 购物车
 def shopcar(request):
     token = request.session.get('token')
+    data = {}
     if token:
         user = User.objects.get(token=token)
-        return render(request, 'shopcar.html', context={'name': user.name})
+        data['name'] = user.name
+        shopcars = Shopcar.objects.filter(user_id=user.id)
+        # print(goods_list)
+        if shopcars.count():
+            goods_list = []
+            for i in shopcars:
+                goods = DailySurprise.objects.get(pk=i.goods_id)
+                goods.num = Shopcar.objects.get(goods_id=goods.id).num
+                # print(num)
+                goods_list.append(goods)
+
+            data['goods_list'] = goods_list
+
+            return render(request, 'shopcar.html', context=data)
+        else:
+            data['msg'] = '还未添加商品'
+            return render(request, 'shopcar.html', context=data)
+
     else:
-        return render(request, 'shopcar.html')
+        return redirect('app:login')
 
 
 # 商品详情
 def goodsdetail(request, goodsid):
+    # 显示商品详情
     goods = DailySurprise.objects.get(pk=goodsid)
-    shopcar = Shopcar.objects.filter(goods=goods)
-    data = {}
-    if shopcar.count():
-        num = shopcar.first().num
-        data['goods'] = goods
-        data['num'] = num
 
-    else:
-        data['goods'] = goods
-        data['num'] = 0
     token = request.session.get('token')
+    data = {'goods': goods}
+    # 判断是否登录
     if token:
         user = User.objects.get(token=token)
         data['name'] = user.name
+
+        shopcar = Shopcar.objects.filter(goods=goods)
+        if shopcar.count():
+            num = shopcar.first().num
+            data['num'] = num
+        else:
+            data['num'] = 0
+
         return render(request, 'goodsdetail.html', context=data)
     else:
+        data['num'] = 0
         return render(request, 'goodsdetail.html', context=data)
 
 

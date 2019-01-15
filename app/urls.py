@@ -23,5 +23,4 @@ urlpatterns = [
     url(r'^addshopcar/$', views.addshopcar, name='addshopcar'),
     # 从购物车移除
     url(r'^delshopcar/$', views.delshopcar, name='delshopcar'),
-
 ]

@@ -9,6 +9,7 @@
 
     <script type="text/javascript" src="{% static 'js/jquery-1.12.3.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/shopcar.js' %}"></script>
 
 
 </head>
@@ -51,7 +52,7 @@
                         <input type="button" value="保存到桌面" class="save">
                     </div>
                 </li>
-                <li><a href="#">手机版</a></li>
+                {#                <li><a href="#">手机版</a></li>#}
                 <li><a href="#">帮助</a></li>
                 <li><a href="#" class="lastli">投诉建议</a></li>
             </ul>
@@ -89,16 +90,39 @@
                     订单已包邮（顺丰、EMS不包邮）
                 </div>
             </div>
-
+{#                购物车商品展示#}
             <div class="shopcar_list">
                 <ul class="list_ul">
-
+                    {% if goods_list %}
+                        {% for goods in goods_list %}
+                            <li>
+                                <div id="forloop">
+                                    {{ forloop.counter }}
+                                </div>
+                                <div id="checkbox">
+                                    <input type="checkbox" checked>
+                                </div>
+                                <div>
+                                    <img src="{{ goods.img }}" alt="">
+                                </div>
+                                <div>
+                                    <p>名称: {{ goods.name }}</p>
+                                    <p>单价: ￥{{ goods.price }}</p>
+                                    <a href="{% url 'app:goodsdetail' goods.id %}">
+                                        <p>数量: {{ goods.num }}</p>
+                                    </a>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    {% else %}
+                        <li style="color: red;">{{ msg }}</li>
+                    {% endif %}
                 </ul>
             </div>
 
             <div class="account">
                 <div class="removeAll">
-                    <input type="checkbox">
+                    <input type="checkbox" checked>
                     <i>全选</i>
                     <a href="#">[删除选中商品]</a>
                     <a href="#">[收藏选中商品]</a>
@@ -116,7 +140,9 @@
         </div>
     </div>
     <div class="still">
-        <input type="button" value="继续购物">
+        <div>
+            <a href="{% url 'app:homepage' 0 %}">继续购物</a>
+        </div>
     </div>
 </div>
 

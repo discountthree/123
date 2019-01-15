@@ -315,10 +315,46 @@
     margin: 0 auto;
 }
 
-.still input {
-    margin: 20px 20px;
+.still div {
+    position: relative;
+    left: 20px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: darkgrey;
+    border-radius: 10px;
+    margin: 5px 0;
 }
 
 .header_right li:nth-child(3) {
     background: none;
+}
+
+.list_ul div {
+    height: 110px;
+    overflow: hidden;
+    float: left;
+}
+
+.list_ul div img {
+    height: 100%;
+}
+
+.list_ul div p {
+    height: 33%;
+}
+
+.list_ul #forloop {
+    text-align: center;
+    width: 50px;
+    line-height: 110px;
+}
+
+.list_ul #checkbox {
+    height: 100%;
+    width: 50px;
+    left: 50px;
+    text-align: center;
+    line-height: 110px;
 }

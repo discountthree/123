@@ -10,7 +10,7 @@
 
     <script type="text/javascript" src="{% static 'js/jquery-1.12.3.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/shopcar.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/goodsdetail.js' %}"></script>
 
 </head>
 <body>
@@ -190,11 +190,11 @@
                     <div class="price">
                         <div class="pre_price">
                             <span>市面价：</span>
-                            <i class="goodsPrice">{{ goods.preprice }}</i>
+                            <i class="goodsPrice">￥{{ goods.preprice }}</i>
                         </div>
                         <div class="now_price">
                             <span>E宠价：</span>
-                            <i>{{ goods.price }}</i>
+                            <i>￥{{ goods.price }}</i>
                         </div>
                     </div>
 
@@ -229,9 +229,6 @@
                         </div>
                         <div class="buy">
                             <span>数量：</span>
-                            {#                            <a href="#" class="minu">-</a>#}
-                            {#                            <input type="text" value="0" class="goodsNum">#}
-                            {#                            <a href="#" class="add">+</a>个#}
                             <span id="minus" goodsid="{{ goods.id }}">-</span>
                             <span id="num">{{ num }}</span>
                             <span id="plus" goodsid="{{ goods.id }}">+</span>
@@ -243,8 +240,13 @@
                     </div>
 
                     <div class="car_btn">
-                        <input type="button" value="加入购物车" class="addCart">
-                        <a href="#"><i></i>咨询</a>
+                        <div class="addCart">
+                            {% if name %}
+                                <a href="{% url 'app:shopcar' %}">查看购物车</a>
+                            {% else %}
+                                <a href="{% url 'app:login' %}">查看购物车</a>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -13,6 +13,7 @@
     <script type="text/javascript" src="{% static 'js/jquery-1.12.3.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery.idcode.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/register.js' %}"></script>
 
 </head>
 <body>
@@ -38,32 +39,37 @@
             </div>
             <form action="{% url 'app:register' %}" method="post">
                 {% csrf_token %}
+
                 <div class="text">
-                    <span>注册用户名：</span>
-                    <input type="text" placeholder="用户名(长度6~20),字母/数字/字母和数字..." name="name">
-                    {% if err1 %}
-                        <span style="color: red;">{{ err1 }}</span>
-                    {% endif %}
+                    <span>用户名：</span>
+                    <input type="text" placeholder="用户名(6~12),字母(大小写),数字" id="name" maxlength="12" name="name">
+                    <span class='hint' style="color: red;">格式错误</span>
+                    <span style="color: red;">{{ err1 }}</span>
                 </div>
+
                 <div class="text">
                     <span>邮箱：</span>
-                    <input type="text" placeholder="邮箱,如1@qqcom" name="email">
+                    <input type="text" placeholder="邮箱" id="email" name="email">
+                    <span class='hint' style="color: red;">格式错误</span>
                 </div>
+
                 <div class="text">
                     <span>设置密码：</span>
-                    <input type="password" placeholder="密码(长度6~12),字母/数字/字母和数字..." name="password1">
+                    <input type="password" placeholder="密码(6~12),字母/数字..." id='password1' maxlength="12" name="password1">
+                    <span class='hint' style="color: red;">格式错误</span>
                 </div>
+
                 <div class="text">
                     <span>验证密码：</span>
-                    <input type="password" placeholder="两次密码需保持一致" name="password2">
-                    {% if err2 %}
-                        <span style="color: red;">{{ err2 }}</span>
-                    {% endif %}
+                    <input type="password" placeholder="再次输入密码" maxlength="12" id='password2' name="password2">
+                    <span class='hint' style="color: red;">密码不一致</span>
                 </div>
+
                 <div class="text">
                     <span></span>
                     <input type="submit" value="注册">
                 </div>
+
             </form>
         </div>
     </div>

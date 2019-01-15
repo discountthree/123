@@ -641,6 +641,7 @@
     /*border: 1px solid #ccc;*/
     text-align: center;
     font-size: 18px;
+
 }
 
 .order {
@@ -660,10 +661,10 @@
     margin-top: 30px;
 }
 
-.car_btn input {
+.car_btn .addCart {
     float: left;
-    width: 190px;
-    height: 56px;
+    width: 200px;
+    height: 50px;
     background: #78b300;
     color: #fff;
     font-size: 20px;
@@ -674,9 +675,12 @@
 .car_btn a {
     display: block;
     float: left;
-    width: 50px;
+    width: 200px;
     height: 50px;
-    margin-left: 20px;
+    /*margin-left: 20px;*/
+    /*margin: auto 20px;*/
+    text-align: center;
+    line-height: 50px;
 }
 
 .car_btn a i {

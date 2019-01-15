@@ -7,7 +7,7 @@ class Banner(models.Model):
 
 # 用户
 class User(models.Model):
-    name = models.CharField(max_length=40)
+    name = models.CharField(max_length=40, unique=True)
     email = models.CharField(max_length=40)
     password = models.CharField(max_length=40)
     token = models.CharField(max_length=256)
@@ -43,4 +43,4 @@ class Shopcar(models.Model):
     user = models.ForeignKey(User)
     goods = models.ForeignKey(DailySurprise)
     num = models.IntegerField()
-    is_delete = models.BooleanField(default=True)
+    is_select = models.BooleanField(default=True)
