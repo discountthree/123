@@ -86,17 +86,17 @@ a {
 }
 
 .header_right li:nth-child(3) {
-    background: url(../img/common_img/h2.gif) no-repeat left;
+    /*background: url(../img/common_img/h2.gif) no-repeat left;*/
     padding-left: 14px;
 }
 
 .header_right li:nth-child(4) {
-    background: url(../img/common_img/h3.gif) no-repeat left;
+    /*background: url(../img/common_img/h3.gif) no-repeat left;*/
     padding-left: 14px;
 }
 
 .header_right li:nth-child(6) {
-    background: url(../img/common_img/h4.gif) no-repeat left;
+    /*background: url(../img/common_img/h4.gif) no-repeat left;*/
     padding-left: 14px;
 }
 

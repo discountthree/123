@@ -27,4 +27,10 @@ urlpatterns = [
     url(r'^changestatus/$', views.changestatus, name='changestatus'),
     # 全选或取消全选
     url(r'^changeisall/$', views.changeisall, name='changeisall'),
+    # 生产订单号
+    url(r'^generateorder/$', views.generateorder, name='generateorder'),
+    # 订单详情
+    url(r'^orderdetail/(\d+)/$', views.orderdetail, name='orderdetail'),
+
+    url(r'^orderlist/$', views.orderlist, name='orderlist'),
 ]

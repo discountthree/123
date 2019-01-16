@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>首页</title>
+    <title>E宠 | 首页</title>
 
     <link rel="stylesheet" href="{% static 'css/swiper-3.4.2.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/common.css' %}"/>
@@ -33,6 +33,7 @@
                     <li style="color: #007aff">用户: {{ name }}</li>
                     <li><a href="{% url 'app:logout' %}">退出</a></li>
                     <li><a href="{% url 'app:shopcar' %}">购物车</a></li>
+                    <li><a href="{% url 'app:orderlist' %}">全部订单</a></li>
                 {% else %}
                     <div>
                         <li><a href="{% url 'app:login' %}">[登录]</a></li>
@@ -42,7 +43,6 @@
                 {% endif %}
 
                 <li id="mypet">
-                    <a href="#">我的E宠<img src="{% static 'img/common_img/h5.gif' %}"></a>
                     <div class="mypet">
                         <a href="#">我的订单 </a>
                         <a href="#">充值得到优惠</a>
@@ -51,14 +51,14 @@
                     </div>
                 </li>
                 <li id="mycollect">
-                    <a href="#">收藏我 <img src="{% static 'img/common_img/h5.gif' %}"></a>
+                    <a href="#">收藏</a>
                     <div class="mycollect">
                         <input type="button" value="加入收藏夹" class="join">
                         <input type="button" value="保存到桌面" class="save">
                     </div>
                 </li>
                 {#                <li><a href="#">手机版</a></li>#}
-                <li><a href="#">帮助</a></li>
+{#                <li><a href="#">帮助</a></li>#}
                 <li><a href="#" class="lastli">投诉建议</a></li>
             </ul>
         </div>

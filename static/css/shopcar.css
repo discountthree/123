@@ -340,6 +340,7 @@
     height: 110px;
     overflow: hidden;
     float: left;
+    margin: 0 10px;
 }
 
 .list_ul div img {
@@ -348,9 +349,9 @@
 }
 
 .list_ul div p {
-    height: 33px;
+    height: 36px;
     margin: 0;
-    line-height: 33px;
+    line-height: 36px;
 }
 
 .list_ul .forloop {

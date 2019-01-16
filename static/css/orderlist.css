@@ -1,0 +1,13 @@
+.shopcar_list {
+    height: 600px;
+    border: 1px solid gray;
+}
+
+.shopcar_list li {
+    border: 1px solid gray;
+    margin: 0.5px auto;
+}
+
+.shopcar_list li div {
+    border: 0;
+}

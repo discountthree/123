@@ -3,7 +3,7 @@ import random
 import time
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
-from app.models import Banner, Recommendation, Goods, DailySurprise, User, Shopcar
+from app.models import Banner, Recommendation, Goods, DailySurprise, User, Shopcar, Order, OrderGoods
 
 
 # 首页
@@ -289,56 +289,68 @@ def changeisall(request):
 
     return JsonResponse(data)
 
-# # 创建订单号
-# def generate_identifier():
-#     temp = str(random.randrange(1000, 10000)) + str(int(time.time())) + str(random.randrange(1000, 10000))
-#     return temp
-#
-#
-# # 生成订单
-# def generateorder(request):
-#     token = request.session.get('token')
-#     user = User.objects.get(token=token)
-#
-#     order = Order()
-#     order.user = user
-#     order.identifier = generate_identifier()
-#     order.save()
-#
-#     shopcars = Shopcar.objects.filter(user=user).filter(is_select=True)
-#     for shopcar in shopcars:
-#         ordergoods = OrderGoods()
-#         ordergoods.order = order
-#         ordergoods.goods = shopcar.goods
-#         ordergoods.number = shopcar.num
-#         ordergoods.save()
-#
-#         shopcar.delete()
-#
-#     data = {
-#         'msg': '下单成功',
-#         'status': 1,
-#         'identifier': order.identifier
-#     }
-#
-#     return JsonResponse(data)
-#
-#
-# def orderdetail(request):
-# # def orderdetail(request, identifier):
-# #     order = Order.objects.get(identifier=identifier)
-# #     return render(request, 'orderdetail.html', context={'order': order})
-#     return render(request, 'orderdetail.html')
-#
-#
-# # 订单状态 【显示】
-# def orderlist(request, stu):
-#     token = request.session.get('token')
-#     user = User.objects.filter(token=token)
-#     orders = Order.objects.filter(user=user).filter(status=stu)
-#
-#     return render(request, 'orderlist.html', context={'orders': orders})
-#
-#
-# def common(request):
-#     return render(request, 'common.html')
+# 创建订单号
+def generate_identifier():
+    temp = str(random.randrange(1000, 10000)) + str(int(time.time())) + str(random.randrange(1000, 10000))
+    return temp
+
+
+# 生成订单
+def generateorder(request):
+    token = request.session.get('token')
+    user = User.objects.get(token=token)
+
+    order = Order()
+    order.user = user
+    order.identifier = generate_identifier()
+    order.save()
+
+    shopcars = Shopcar.objects.filter(user=user).filter(is_select=True)
+    for shopcar in shopcars:
+        ordergoods = OrderGoods()
+        ordergoods.order = order
+        ordergoods.goods = shopcar.goods
+        ordergoods.number = shopcar.num
+        ordergoods.save()
+
+        shopcar.delete()
+
+    data = {
+        'msg': '下单成功',
+        'status': 1,
+        'orderid': order.id,
+    }
+
+    return JsonResponse(data)
+
+
+# 订单详情
+def orderdetail(request, orderid):
+    token = request.session.get('token')
+    if token:
+        user = User.objects.get(token=token)
+        order = Order.objects.get(id=orderid)
+
+        data = {
+            'name': user.name,
+            'order': order,
+        }
+        return render(request, 'orderdetail.html', context=data)
+    else:
+        return redirect('app:login')
+
+
+
+def orderlist(request):
+    token = request.session.get('token')
+    user = User.objects.get(token=token)
+    orders = Order.objects.filter(user=user)
+
+    data = {
+        'name': user.name,
+        'orders': orders,
+    }
+
+    return render(request, 'orderlist.html', context=data)
+
+

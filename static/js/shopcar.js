@@ -56,7 +56,7 @@ $(function () {
 
         // 发起ajax请求
         $.get('/app/changeisall/', {'isall': isall}, function (response) {
-            console.log(response);
+            // console.log(response);
             if (response.status) {
                 // 遍历
                 $('.shopcar .list_ul').each(function () {
@@ -93,5 +93,17 @@ $(function () {
         // $('.total h3').html(parseInt(sum))
         $('.total h3').html(parseFloat(sum))
     }
+
+    //点击生成订单并跳转详情页
+        $('.generateorder').click(function () {
+
+            $.get('/app/generateorder/',function (response) {
+                if (response.status == 1){
+                    var orderid = response.orderid
+                    console.log(orderid)
+                    window.open('/app/orderdetail/'+ orderid, target='_self')
+                }
+            })
+        })
 
 });
