@@ -125,14 +125,18 @@ def shopcar(request):
         # print(goods_list)
         if shopcars.count():
             goods_list = []
+            totalprice = 0
             for i in shopcars:
                 goods = DailySurprise.objects.get(pk=i.goods_id)
+                goods_list.append(goods)
                 goods.num = Shopcar.objects.get(goods_id=goods.id).num
                 goods.is_select = Shopcar.objects.get(goods_id=goods.id).is_select
                 # print(num)
-                goods_list.append(goods)
+                if goods.is_select:
+                    totalprice = totalprice + goods.num * float(goods.price)
 
             data['goods_list'] = goods_list
+            data['totalprice'] = totalprice
 
             return render(request, 'shopcar.html', context=data)
         else:
@@ -143,7 +147,7 @@ def shopcar(request):
         return redirect('app:login')
 
 
-# 商品详情
+# 商品详情(DailySurprise)
 def goodsdetail(request, goodsid):
     # 显示商品详情
     goods = DailySurprise.objects.get(pk=goodsid)
@@ -168,6 +172,7 @@ def goodsdetail(request, goodsid):
         return render(request, 'goodsdetail.html', context=data)
 
 
+# 商品详情
 def goodsdetail2(request, goodsid):
     goods = Goods.objects.get(id=goodsid)
 
@@ -184,6 +189,7 @@ def goodsdetail2(request, goodsid):
         return render(request, 'goodsdetail2.html', context=data)
 
 
+# 购物车加操作
 def addshopcar(request):
     token = request.session.get('token')
     goodsid = request.GET.get('goodsid')
@@ -218,6 +224,7 @@ def addshopcar(request):
         return JsonResponse(data)
 
 
+# 购物车减操作
 def delshopcar(request):
     token = request.session.get('token')
     goodsid = request.GET.get('goodsid')
@@ -243,6 +250,7 @@ def delshopcar(request):
         return JsonResponse(data)
 
 
+# 改变选中状态
 def changestatus(request):
     goodsid = request.GET.get('goodsid')
     goods = Shopcar.objects.get(goods_id=goodsid)
@@ -257,6 +265,7 @@ def changestatus(request):
     return JsonResponse(data)
 
 
+# 改变全选状态
 def changeisall(request):
     token = request.session.get('token')
     user = User.objects.get(token=token)
@@ -279,3 +288,57 @@ def changeisall(request):
     }
 
     return JsonResponse(data)
+
+# # 创建订单号
+# def generate_identifier():
+#     temp = str(random.randrange(1000, 10000)) + str(int(time.time())) + str(random.randrange(1000, 10000))
+#     return temp
+#
+#
+# # 生成订单
+# def generateorder(request):
+#     token = request.session.get('token')
+#     user = User.objects.get(token=token)
+#
+#     order = Order()
+#     order.user = user
+#     order.identifier = generate_identifier()
+#     order.save()
+#
+#     shopcars = Shopcar.objects.filter(user=user).filter(is_select=True)
+#     for shopcar in shopcars:
+#         ordergoods = OrderGoods()
+#         ordergoods.order = order
+#         ordergoods.goods = shopcar.goods
+#         ordergoods.number = shopcar.num
+#         ordergoods.save()
+#
+#         shopcar.delete()
+#
+#     data = {
+#         'msg': '下单成功',
+#         'status': 1,
+#         'identifier': order.identifier
+#     }
+#
+#     return JsonResponse(data)
+#
+#
+# def orderdetail(request):
+# # def orderdetail(request, identifier):
+# #     order = Order.objects.get(identifier=identifier)
+# #     return render(request, 'orderdetail.html', context={'order': order})
+#     return render(request, 'orderdetail.html')
+#
+#
+# # 订单状态 【显示】
+# def orderlist(request, stu):
+#     token = request.session.get('token')
+#     user = User.objects.filter(token=token)
+#     orders = Order.objects.filter(user=user).filter(status=stu)
+#
+#     return render(request, 'orderlist.html', context={'orders': orders})
+#
+#
+# def common(request):
+#     return render(request, 'common.html')

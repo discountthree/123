@@ -44,3 +44,25 @@ class Shopcar(models.Model):
     goods = models.ForeignKey(DailySurprise)
     num = models.IntegerField()
     is_select = models.BooleanField(default=True)
+
+
+# 用户订单（关联用户和订单）
+class Order(models.Model):
+    # 关联用户
+    user = models.ForeignKey(User)
+    # 订单创建时间
+    createtime = models.DateTimeField(auto_now_add=True)
+    # 记录状态（-1过期、未付款0、已付款1，未发货2、待收货3...）
+    status = models.IntegerField(default=0)
+    # 订单号
+    identifier = models.CharField(max_length=256)
+
+
+# 商品订单（关联商品和订单）
+class OrderGoods(models.Model):
+    # 订单
+    order = models.ForeignKey(Order)
+    # 商品
+    goods = models.ForeignKey(DailySurprise)
+    # 个数
+    number = models.IntegerField()
