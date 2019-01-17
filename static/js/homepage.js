@@ -24,8 +24,12 @@ $(function () {
 
     // 记录点击下标
     $('.ctb-li').click(function () {
-        $.cookie('liIndex', $(this).index(), {path: '/'});
+
+        $.cookie('liIndex', $(this).index(), {expires:1, path: '/'});
+
     })
+
+
 
 });
 

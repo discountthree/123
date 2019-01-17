@@ -1,3 +1,4 @@
+#coding=utf-8
 from django.conf.urls import url
 
 from app import views
@@ -31,6 +32,6 @@ urlpatterns = [
     url(r'^generateorder/$', views.generateorder, name='generateorder'),
     # 订单详情
     url(r'^orderdetail/(\d+)/$', views.orderdetail, name='orderdetail'),
-
+    # 用户全部订单
     url(r'^orderlist/$', views.orderlist, name='orderlist'),
 ]

@@ -70,12 +70,16 @@
 
 <div class="ending">
     {#    <div class="end-left"><a href="#"><span>取消订单</span></a></div>#}
-    <a href="#"><div class="end-left">
-        <h3>订单详情: {{ order.identifier }}</h3>
-    </div></a>
-    <a href="#"><div class="end-right">
-        <span>去结账</span>
-    </div></a>
+    <a href="#">
+        <div class="end-left">
+            <h3>订单详情: {{ order.identifier }}</h3>
+        </div>
+    </a>
+    <a href="#">
+        <div class="end-right">
+            <span>去结账</span>
+        </div>
+    </a>
 </div>
 
 <ul class="shopcar_list">
@@ -89,7 +93,25 @@
         <div><p>{{ order.user.name }}</p></div>
         <div><p>{{ order.identifier }}</p></div>
         <div><p>{{ order.createtime }}</p></div>
-        <div><p>{{ order.status }}</p></div>
+        <div>
+            {#            <span style="float: left; margin-left: 20px">￥{{ totalprice }}</span>#}
+            {#            <span style="float: right; margin-right: 20px">{{ order.status }}</span>#}
+            <p style="color: red;">
+                {% if order.status == -1 %}
+                    订单超时
+                {% elif order.status == 0 %}
+                    待支付
+                {% elif order.status == 1 %}
+                    待发货
+                {% elif order.status == 2 %}
+                    待收货
+                {% elif order.status == 2 %}
+                    待评价
+                {% else %}
+                    退货/退款
+                {% endif %}
+            </p>
+        </div>
     </li>
 </ul>
 

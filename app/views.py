@@ -1,3 +1,4 @@
+# coding=utf-8
 import hashlib
 import random
 import time
@@ -21,7 +22,7 @@ def homepage(request, liIndex):
     for i in range(0, 6):
         for j in range(0, 8):
             goods_list['goods' + str(i)] = Goods.objects.all()[i * 8:(i + 1) * 8]
-    # print(goods_list)
+            # print(goods_list)
 
     data = {
         'banners': banners,
@@ -100,6 +101,7 @@ def login(request):
 
             response = redirect('app:homepage1')
             request.session['token'] = user.token
+            request.session.set_expiry(0)
 
             return response
         else:
@@ -289,6 +291,7 @@ def changeisall(request):
 
     return JsonResponse(data)
 
+
 # 创建订单号
 def generate_identifier():
     temp = str(random.randrange(1000, 10000)) + str(int(time.time())) + str(random.randrange(1000, 10000))
@@ -334,10 +337,9 @@ def orderdetail(request, orderid):
         data = {
             'name': user.name,
             'order': order,
-        }
+            }
         return render(request, 'orderdetail.html', context=data)
-    else:
-        return redirect('app:login')
+
 
 
 
@@ -352,5 +354,4 @@ def orderlist(request):
     }
 
     return render(request, 'orderlist.html', context=data)
-
 

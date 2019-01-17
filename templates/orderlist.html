@@ -96,8 +96,24 @@
                 <div><p>{{ order.identifier }}</p></div>
             </a>
             <div><p>{{ order.createtime }}</p></div>
-            <div><p>{{ order.status }}</p></div>
-            <div><p></p></div>
+            <a href="{% url 'app:orderdetail' order.id %}">
+                <div><p style="color: red;line-height: 50px">
+                {% if order.status == -1 %}
+                    订单超时
+                {% elif order.status == 0 %}
+                    待支付
+                {% elif order.status == 1 %}
+                    待发货
+                {% elif order.status == 2 %}
+                    待收货
+                {% elif order.status == 2 %}
+                    待评价
+                {% else %}
+                    退货/退款
+                {% endif %}
+            </p></div>
+            </a>
+            <div><p>...</p></div>
         </li>
     {% endfor %}
 
