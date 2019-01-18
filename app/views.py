@@ -4,6 +4,8 @@ import random
 import time
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
+
+from app.Alipay import alipay
 from app.models import Banner, Recommendation, Goods, DailySurprise, User, Shopcar, Order, OrderGoods
 
 
@@ -337,10 +339,8 @@ def orderdetail(request, orderid):
         data = {
             'name': user.name,
             'order': order,
-            }
+        }
         return render(request, 'orderdetail.html', context=data)
-
-
 
 
 def orderlist(request):
@@ -355,3 +355,38 @@ def orderlist(request):
 
     return render(request, 'orderlist.html', context=data)
 
+
+def appnotify(request):
+    body_str = request.body.decode('utf-8')
+    return JsonResponse({'msg': 'success'})
+
+
+def returnview(request):
+    return redirect('app:orderdetail', 3)
+
+
+def pay(request):
+    orderid = request.GET.get('orderid')
+    order = Order.objects.get(pk=orderid)
+    # goods_list = OrderGoods.objects.filter(order_id=orderid)
+    # sumprice = 0
+    # for goods in goods_list:
+    #     price = float(DailySurprise.objects.get(pk=goods.goods_id).price)
+    #     nums = goods.number
+    #     sumprice = sumprice + price * nums
+    order.status = 1
+    order.save()
+
+    url = alipay.direct_pay(
+        # 订单标题
+        subject=str('E宠订单') + order.identifier,
+        # 订单号[axf]
+        out_trade_no=Order.objects.get(pk=orderid).identifier,
+        # 支付金额
+        # total_amount=sumprice,
+        total_amount=1,
+        return_url='http://47.107.190.83/app/returenview/'
+    )
+    alipay_url = 'https://openapi.alipaydev.com/gateway.do?{data}'.format(data=url)
+
+    return JsonResponse({'alipay_url': alipay_url, 'status': 1})

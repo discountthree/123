@@ -34,4 +34,10 @@ urlpatterns = [
     url(r'^orderdetail/(\d+)/$', views.orderdetail, name='orderdetail'),
     # 用户全部订单
     url(r'^orderlist/$', views.orderlist, name='orderlist'),
+    # 支付完成,通知服务器
+    url(r'^appnotify/$', views.appnotify, name='appnotify'),
+    # 支付完成，客户端从支付页面返回项目页面
+    url(r'^returnview/$', views.returnview, name='returnview'),
+    # 支付
+    url(r'^pay/$', views.pay, name='pay'),
 ]

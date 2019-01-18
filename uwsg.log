@@ -1,0 +1,1202 @@
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 17 16:58:14 2019] ***
+compiled with version: 5.4.0 20160609 on 17 January 2019 07:09:11
+os: Linux-4.4.0-117-generic #141-Ubuntu SMP Tue Mar 13 11:58:07 UTC 2018
+nodename: oneplace
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Epets
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Epets
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3824
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (0.0.0.0:8000).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 17 17:02:16 2019] ***
+compiled with version: 5.4.0 20160609 on 17 January 2019 07:09:11
+os: Linux-4.4.0-117-generic #141-Ubuntu SMP Tue Mar 13 11:58:07 UTC 2018
+nodename: oneplace
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Epets
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Epets
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3824
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0xccd440
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xccd440 pid: 24443 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 24443, cores: 1)
+Not Found: /app/
+[pid: 24443|app: 0|req: 1/1] 113.87.161.170 () {44 vars in 729 bytes} [Thu Jan 17 17:02:24 2019] GET /app/ => generated 4706 bytes in 11 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 2/2] 113.87.161.170 () {42 vars in 716 bytes} [Thu Jan 17 17:02:31 2019] GET /app/homepage/ => generated 0 bytes in 6 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 3/3] 113.87.161.170 () {42 vars in 720 bytes} [Thu Jan 17 17:02:31 2019] GET /app/homepage/0/ => generated 76588 bytes in 73 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 4/4] 113.87.160.245 () {44 vars in 762 bytes} [Thu Jan 17 17:04:51 2019] GET /app/login/ => generated 3042 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 5/5] 113.87.161.170 () {40 vars in 677 bytes} [Thu Jan 17 17:05:09 2019] GET /app/homepage/0/ => generated 76588 bytes in 38 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 6/6] 113.87.161.170 () {42 vars in 719 bytes} [Thu Jan 17 17:05:18 2019] GET /app/login/ => generated 3042 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 24443|app: 0|req: 7/7] 113.87.160.245 () {42 vars in 724 bytes} [Thu Jan 17 17:05:20 2019] GET /favicon.ico => generated 2065 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 8/8] 113.87.160.245 () {52 vars in 980 bytes} [Thu Jan 17 17:05:25 2019] POST /app/login/ => generated 0 bytes in 15 msecs (HTTP/1.1 302) 6 headers in 225 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 9/9] 113.87.160.245 () {46 vars in 884 bytes} [Thu Jan 17 17:05:25 2019] GET /app/homepage/ => generated 0 bytes in 0 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 10/10] 113.87.160.245 () {46 vars in 888 bytes} [Thu Jan 17 17:05:25 2019] GET /app/homepage/0/ => generated 76598 bytes in 38 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 11/11] 113.87.160.245 () {44 vars in 856 bytes} [Thu Jan 17 17:05:32 2019] GET /app/shopcar/ => generated 12097 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 12/12] 113.87.161.170 () {44 vars in 817 bytes} [Thu Jan 17 17:05:46 2019] GET /app/changestatus/?goodsid=22 => generated 79 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 13/13] 113.87.161.170 () {44 vars in 817 bytes} [Thu Jan 17 17:05:52 2019] GET /app/changestatus/?goodsid=24 => generated 79 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 14/14] 113.87.161.170 () {44 vars in 817 bytes} [Thu Jan 17 17:05:53 2019] GET /app/changestatus/?goodsid=24 => generated 80 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 15/15] 113.87.161.170 () {44 vars in 817 bytes} [Thu Jan 17 17:05:54 2019] GET /app/changestatus/?goodsid=22 => generated 80 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 16/16] 113.87.161.170 () {44 vars in 815 bytes} [Thu Jan 17 17:05:55 2019] GET /app/changeisall/?isall=true => generated 61 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 17/17] 113.87.161.170 () {44 vars in 817 bytes} [Thu Jan 17 17:05:56 2019] GET /app/changeisall/?isall=false => generated 61 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 18/18] 113.87.161.170 () {44 vars in 815 bytes} [Thu Jan 17 17:05:57 2019] GET /app/changeisall/?isall=true => generated 61 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 19/19] 113.87.161.170 () {44 vars in 817 bytes} [Thu Jan 17 17:05:58 2019] GET /app/changeisall/?isall=false => generated 61 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 20/20] 113.87.161.170 () {44 vars in 817 bytes} [Thu Jan 17 17:05:59 2019] GET /app/changestatus/?goodsid=24 => generated 79 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 21/21] 113.87.161.170 () {44 vars in 817 bytes} [Thu Jan 17 17:06:00 2019] GET /app/changestatus/?goodsid=22 => generated 79 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 22/22] 113.87.161.170 () {44 vars in 817 bytes} [Thu Jan 17 17:06:02 2019] GET /app/changestatus/?goodsid=22 => generated 80 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 23/23] 113.87.161.170 () {44 vars in 817 bytes} [Thu Jan 17 17:06:03 2019] GET /app/changestatus/?goodsid=24 => generated 80 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 24/24] 113.87.161.170 () {44 vars in 815 bytes} [Thu Jan 17 17:06:06 2019] GET /app/changeisall/?isall=true => generated 61 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 25/25] 113.87.161.170 () {44 vars in 859 bytes} [Thu Jan 17 17:06:08 2019] GET /app/homepage/0/ => generated 76598 bytes in 44 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 26/26] 113.87.161.170 () {44 vars in 873 bytes} [Thu Jan 17 17:06:14 2019] GET /app/homepage/3/ => generated 76601 bytes in 38 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 27/27] 113.87.160.245 () {44 vars in 881 bytes} [Thu Jan 17 17:06:19 2019] GET /app/goodsdetail/15/ => generated 15187 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 28/28] 113.87.161.170 () {44 vars in 831 bytes} [Thu Jan 17 17:06:22 2019] GET /app/addshopcar/?goodsid=15 => generated 186 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 29/29] 113.87.161.170 () {44 vars in 831 bytes} [Thu Jan 17 17:06:23 2019] GET /app/addshopcar/?goodsid=15 => generated 186 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 30/30] 113.87.161.170 () {44 vars in 831 bytes} [Thu Jan 17 17:06:23 2019] GET /app/addshopcar/?goodsid=15 => generated 186 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 31/31] 113.87.161.170 () {44 vars in 871 bytes} [Thu Jan 17 17:06:24 2019] GET /app/shopcar/ => generated 13329 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 32/32] 113.87.161.170 () {44 vars in 809 bytes} [Thu Jan 17 17:06:54 2019] GET /app/generateorder/ => generated 62 bytes in 32 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 33/33] 113.87.161.170 () {44 vars in 874 bytes} [Thu Jan 17 17:06:54 2019] GET /app/orderdetail/9 => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 124 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 34/34] 113.87.161.170 () {44 vars in 876 bytes} [Thu Jan 17 17:06:54 2019] GET /app/orderdetail/9/ => generated 9856 bytes in 32 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /
+[pid: 24443|app: 0|req: 35/35] 113.87.160.245 () {42 vars in 858 bytes} [Thu Jan 17 17:07:45 2019] GET / => generated 2014 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 24443|app: 0|req: 36/36] 113.87.160.245 () {42 vars in 836 bytes} [Thu Jan 17 17:07:45 2019] GET /favicon.ico => generated 2065 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 37/37] 113.87.160.245 () {42 vars in 882 bytes} [Thu Jan 17 17:07:55 2019] GET /app/homepage => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 119 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 38/38] 113.87.160.245 () {42 vars in 884 bytes} [Thu Jan 17 17:07:55 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+Internal Server Error: /app/homepage/0/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 37, in homepage
+    user = User.objects.get(token=token)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: User matching query does not exist.
+[pid: 24443|app: 0|req: 39/39] 113.87.160.245 () {42 vars in 888 bytes} [Thu Jan 17 17:07:56 2019] GET /app/homepage/0/ => generated 74568 bytes in 116 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /.git/config
+[pid: 24443|app: 0|req: 40/40] 89.248.174.141 () {30 vars in 444 bytes} [Thu Jan 17 17:08:12 2019] GET /.git/config => generated 2065 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 24443|app: 0|req: 41/41] 113.87.160.245 () {42 vars in 716 bytes} [Thu Jan 17 17:08:26 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 42/42] 113.87.160.245 () {42 vars in 720 bytes} [Thu Jan 17 17:08:26 2019] GET /app/homepage/0/ => generated 76588 bytes in 35 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 43/43] 113.87.160.245 () {42 vars in 884 bytes} [Thu Jan 17 17:08:42 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+Internal Server Error: /app/homepage/0/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 37, in homepage
+    user = User.objects.get(token=token)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: User matching query does not exist.
+[pid: 24443|app: 0|req: 44/44] 113.87.160.245 () {42 vars in 888 bytes} [Thu Jan 17 17:08:42 2019] GET /app/homepage/0/ => generated 74568 bytes in 86 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 45/45] 113.87.160.245 () {40 vars in 675 bytes} [Thu Jan 17 17:09:09 2019] GET /app/homepage/0/ => generated 76588 bytes in 36 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 46/46] 113.87.160.245 () {40 vars in 671 bytes} [Thu Jan 17 17:09:36 2019] GET /app/homepage/ => generated 0 bytes in 0 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 47/47] 113.87.160.245 () {40 vars in 675 bytes} [Thu Jan 17 17:09:37 2019] GET /app/homepage/0/ => generated 76588 bytes in 36 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 24443|app: 0|req: 48/48] 113.87.160.245 () {38 vars in 556 bytes} [Thu Jan 17 17:09:38 2019] GET /favicon.ico => generated 2065 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 49/49] 113.87.160.245 () {42 vars in 884 bytes} [Thu Jan 17 17:10:40 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+Internal Server Error: /app/homepage/0/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 37, in homepage
+    user = User.objects.get(token=token)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: User matching query does not exist.
+[pid: 24443|app: 0|req: 50/50] 113.87.160.245 () {42 vars in 888 bytes} [Thu Jan 17 17:10:40 2019] GET /app/homepage/0/ => generated 74568 bytes in 86 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 24443|app: 0|req: 51/51] 113.87.160.245 () {42 vars in 851 bytes} [Thu Jan 17 17:10:41 2019] GET /favicon.ico => generated 2065 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 52/52] 113.87.160.245 () {42 vars in 884 bytes} [Thu Jan 17 17:11:07 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+Internal Server Error: /app/homepage/0/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 37, in homepage
+    user = User.objects.get(token=token)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: User matching query does not exist.
+[pid: 24443|app: 0|req: 53/53] 113.87.160.245 () {42 vars in 888 bytes} [Thu Jan 17 17:11:07 2019] GET /app/homepage/0/ => generated 74568 bytes in 80 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 54/54] 223.104.64.139 () {40 vars in 683 bytes} [Thu Jan 17 17:11:14 2019] GET /app/homepage/0/ => generated 76588 bytes in 35 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 55/55] 120.92.72.88 () {38 vars in 496 bytes} [Thu Jan 17 17:11:15 2019] GET /app/homepage/0/ => generated 76588 bytes in 38 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /
+[pid: 24443|app: 0|req: 56/56] 120.92.72.197 () {40 vars in 519 bytes} [Thu Jan 17 17:11:17 2019] GET / => generated 2014 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 57/57] 113.87.160.245 () {40 vars in 671 bytes} [Thu Jan 17 17:11:22 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 58/58] 113.87.160.245 () {40 vars in 675 bytes} [Thu Jan 17 17:11:23 2019] GET /app/homepage/0/ => generated 76588 bytes in 38 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 59/59] 113.87.161.170 () {42 vars in 717 bytes} [Thu Jan 17 17:11:29 2019] GET /app/login/ => generated 3042 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 24443|app: 0|req: 60/60] 113.87.161.170 () {38 vars in 556 bytes} [Thu Jan 17 17:11:32 2019] GET /favicon.ico => generated 2065 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 61/61] 223.104.64.139 () {40 vars in 683 bytes} [Thu Jan 17 17:11:43 2019] GET /app/homepage/0/ => generated 76588 bytes in 39 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 24443|app: 0|req: 62/62] 223.104.64.139 () {38 vars in 503 bytes} [Thu Jan 17 17:11:47 2019] GET /favicon.ico => generated 2065 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 63/63] 113.87.161.170 () {50 vars in 949 bytes} [Thu Jan 17 17:11:48 2019] POST /app/login/ => generated 0 bytes in 12 msecs (HTTP/1.1 302) 6 headers in 225 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 64/64] 113.87.161.170 () {46 vars in 882 bytes} [Thu Jan 17 17:11:48 2019] GET /app/homepage/ => generated 0 bytes in 0 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 65/65] 113.87.161.170 () {46 vars in 886 bytes} [Thu Jan 17 17:11:48 2019] GET /app/homepage/0/ => generated 76598 bytes in 40 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 66/66] 223.104.64.139 () {40 vars in 683 bytes} [Thu Jan 17 17:11:49 2019] GET /app/homepage/0/ => generated 76588 bytes in 37 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 67/67] 113.87.161.170 () {44 vars in 854 bytes} [Thu Jan 17 17:11:52 2019] GET /app/shopcar/ => generated 9814 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 68/68] 113.87.160.245 () {44 vars in 855 bytes} [Thu Jan 17 17:11:56 2019] GET /app/homepage/0/ => generated 76598 bytes in 42 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 69/69] 113.87.160.245 () {44 vars in 854 bytes} [Thu Jan 17 17:11:57 2019] GET /app/shopcar/ => generated 9814 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 70/70] 113.87.160.245 () {44 vars in 855 bytes} [Thu Jan 17 17:11:59 2019] GET /app/homepage/0/ => generated 76598 bytes in 41 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 71/71] 113.87.160.245 () {44 vars in 858 bytes} [Thu Jan 17 17:12:00 2019] GET /app/orderlist/ => generated 11280 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 72/72] 113.87.161.170 () {44 vars in 865 bytes} [Thu Jan 17 17:12:03 2019] GET /app/orderdetail/3/ => generated 9395 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 73/73] 113.87.160.245 () {44 vars in 858 bytes} [Thu Jan 17 17:12:05 2019] GET /app/orderlist/ => generated 11280 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 74/74] 113.87.160.245 () {44 vars in 865 bytes} [Thu Jan 17 17:12:06 2019] GET /app/orderdetail/7/ => generated 8957 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 75/75] 113.87.160.245 () {44 vars in 858 bytes} [Thu Jan 17 17:12:09 2019] GET /app/orderlist/ => generated 11280 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 76/76] 113.87.161.170 () {44 vars in 865 bytes} [Thu Jan 17 17:13:44 2019] GET /app/orderdetail/9/ => generated 9856 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 77/77] 113.87.161.170 () {44 vars in 858 bytes} [Thu Jan 17 17:13:46 2019] GET /app/orderlist/ => generated 11280 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 78/78] 113.87.161.170 () {44 vars in 865 bytes} [Thu Jan 17 17:13:48 2019] GET /app/orderdetail/9/ => generated 9856 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 79/79] 113.87.161.170 () {44 vars in 858 bytes} [Thu Jan 17 17:13:50 2019] GET /app/orderlist/ => generated 11280 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 80/80] 113.87.161.170 () {44 vars in 865 bytes} [Thu Jan 17 17:13:52 2019] GET /app/orderdetail/3/ => generated 9395 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 81/81] 113.87.161.170 () {44 vars in 858 bytes} [Thu Jan 17 17:13:54 2019] GET /app/orderlist/ => generated 11280 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 82/82] 113.87.161.170 () {44 vars in 865 bytes} [Thu Jan 17 17:13:54 2019] GET /app/orderdetail/4/ => generated 8971 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 83/83] 113.87.161.170 () {44 vars in 858 bytes} [Thu Jan 17 17:14:02 2019] GET /app/orderlist/ => generated 11280 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 84/84] 113.87.160.245 () {44 vars in 783 bytes} [Thu Jan 17 17:14:07 2019] GET /app/homepage/3/ => generated 76591 bytes in 41 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 85/85] 113.87.160.245 () {44 vars in 783 bytes} [Thu Jan 17 17:14:10 2019] GET /app/homepage/5/ => generated 76565 bytes in 38 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 86/86] 113.87.160.245 () {44 vars in 791 bytes} [Thu Jan 17 17:14:34 2019] GET /app/goodsdetail2/1/ => generated 15210 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 87/87] 113.87.161.170 () {44 vars in 791 bytes} [Thu Jan 17 17:14:51 2019] GET /app/goodsdetail2/1/ => generated 15210 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /
+[pid: 24443|app: 0|req: 88/88] 165.16.43.67 () {32 vars in 444 bytes} [Thu Jan 17 17:15:10 2019] GET / => generated 2017 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 24443|app: 0|req: 89/89] 113.87.160.245 () {42 vars in 734 bytes} [Thu Jan 17 17:17:29 2019] GET / => generated 2014 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 90/90] 113.87.160.245 () {42 vars in 760 bytes} [Thu Jan 17 17:17:36 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 91/91] 113.87.160.245 () {42 vars in 764 bytes} [Thu Jan 17 17:17:36 2019] GET /app/homepage/0/ => generated 76588 bytes in 34 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 24443|app: 0|req: 92/92] 113.87.161.170 () {42 vars in 884 bytes} [Thu Jan 17 17:18:18 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+Internal Server Error: /app/homepage/0/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 37, in homepage
+    user = User.objects.get(token=token)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: User matching query does not exist.
+[pid: 24443|app: 0|req: 93/93] 113.87.161.170 () {42 vars in 888 bytes} [Thu Jan 17 17:18:18 2019] GET /app/homepage/0/ => generated 74568 bytes in 78 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 24443|app: 0|req: 94/94] 113.87.161.170 () {42 vars in 851 bytes} [Thu Jan 17 17:18:19 2019] GET /favicon.ico => generated 2065 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 95/95] 113.87.161.170 () {44 vars in 773 bytes} [Thu Jan 17 17:19:17 2019] GET /app/login/ => generated 3042 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 96/96] 113.87.160.245 () {48 vars in 885 bytes} [Thu Jan 17 17:19:25 2019] POST /app/login/ => generated 0 bytes in 14 msecs (HTTP/1.1 302) 6 headers in 225 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 97/97] 113.87.160.245 () {44 vars in 818 bytes} [Thu Jan 17 17:19:25 2019] GET /app/homepage/ => generated 0 bytes in 0 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 98/98] 113.87.160.245 () {44 vars in 822 bytes} [Thu Jan 17 17:19:25 2019] GET /app/homepage/0/ => generated 76575 bytes in 40 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 99/99] 113.87.160.245 () {44 vars in 819 bytes} [Thu Jan 17 17:19:28 2019] GET /app/logout/ => generated 0 bytes in 6 msecs (HTTP/1.1 302) 5 headers in 221 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 100/100] 113.87.160.245 () {44 vars in 779 bytes} [Thu Jan 17 17:19:28 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 101/101] 113.87.160.245 () {44 vars in 783 bytes} [Thu Jan 17 17:19:28 2019] GET /app/homepage/0/ => generated 76565 bytes in 35 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 102/102] 113.87.160.245 () {44 vars in 908 bytes} [Thu Jan 17 17:19:45 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+Internal Server Error: /app/homepage/0/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 37, in homepage
+    user = User.objects.get(token=token)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: User matching query does not exist.
+[pid: 24443|app: 0|req: 103/103] 113.87.160.245 () {44 vars in 912 bytes} [Thu Jan 17 17:19:45 2019] GET /app/homepage/0/ => generated 74696 bytes in 108 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+Internal Server Error: /app/homepage/0/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 37, in homepage
+    user = User.objects.get(token=token)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: User matching query does not exist.
+[pid: 24443|app: 0|req: 104/104] 113.87.161.170 () {42 vars in 888 bytes} [Thu Jan 17 17:19:47 2019] GET /app/homepage/0/ => generated 74568 bytes in 78 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+Internal Server Error: /app/homepage/0/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 37, in homepage
+    user = User.objects.get(token=token)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: User matching query does not exist.
+[pid: 24443|app: 0|req: 105/105] 113.87.161.170 () {44 vars in 919 bytes} [Thu Jan 17 17:19:51 2019] GET /app/homepage/0/ => generated 74703 bytes in 81 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 106/106] 113.87.160.245 () {44 vars in 773 bytes} [Thu Jan 17 17:21:12 2019] GET /app/login/ => generated 3042 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 107/107] 113.87.160.245 () {48 vars in 885 bytes} [Thu Jan 17 17:21:18 2019] POST /app/login/ => generated 0 bytes in 13 msecs (HTTP/1.1 302) 6 headers in 225 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 108/108] 113.87.160.245 () {44 vars in 818 bytes} [Thu Jan 17 17:21:18 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 109/109] 113.87.160.245 () {44 vars in 822 bytes} [Thu Jan 17 17:21:18 2019] GET /app/homepage/0/ => generated 76575 bytes in 42 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 110/110] 113.87.161.170 () {42 vars in 727 bytes} [Thu Jan 17 17:21:40 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 111/111] 113.87.161.170 () {42 vars in 731 bytes} [Thu Jan 17 17:21:41 2019] GET /app/homepage/0/ => generated 76565 bytes in 39 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 112/112] 113.87.161.170 () {42 vars in 760 bytes} [Thu Jan 17 17:22:11 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 113/113] 113.87.161.170 () {42 vars in 764 bytes} [Thu Jan 17 17:22:11 2019] GET /app/homepage/0/ => generated 76588 bytes in 38 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 114/114] 113.87.161.170 () {42 vars in 771 bytes} [Thu Jan 17 17:22:31 2019] GET /app/homepage => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 119 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 115/115] 113.87.161.170 () {42 vars in 773 bytes} [Thu Jan 17 17:22:31 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 116/116] 113.87.161.170 () {42 vars in 777 bytes} [Thu Jan 17 17:22:31 2019] GET /app/homepage/0/ => generated 76591 bytes in 40 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 24443|app: 0|req: 117/117] 113.87.161.170 () {42 vars in 740 bytes} [Thu Jan 17 17:22:32 2019] GET /favicon.ico => generated 2065 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 118/118] 113.87.160.245 () {42 vars in 884 bytes} [Thu Jan 17 17:22:46 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+Internal Server Error: /app/homepage/0/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 37, in homepage
+    user = User.objects.get(token=token)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: User matching query does not exist.
+[pid: 24443|app: 0|req: 119/119] 113.87.160.245 () {42 vars in 888 bytes} [Thu Jan 17 17:22:46 2019] GET /app/homepage/0/ => generated 74568 bytes in 82 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+Internal Server Error: /app/homepage/0/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 37, in homepage
+    user = User.objects.get(token=token)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: User matching query does not exist.
+[pid: 24443|app: 0|req: 120/120] 113.87.160.245 () {44 vars in 919 bytes} [Thu Jan 17 17:23:39 2019] GET /app/homepage/0/ => generated 74703 bytes in 86 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+Internal Server Error: /app/homepage/0/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 37, in homepage
+    user = User.objects.get(token=token)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: User matching query does not exist.
+[pid: 24443|app: 0|req: 121/121] 113.87.160.245 () {44 vars in 919 bytes} [Thu Jan 17 17:23:41 2019] GET /app/homepage/0/ => generated 74703 bytes in 91 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 24443|app: 0|req: 122/122] 113.87.160.245 () {44 vars in 908 bytes} [Thu Jan 17 17:23:56 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+Internal Server Error: /app/homepage/0/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 37, in homepage
+    user = User.objects.get(token=token)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: User matching query does not exist.
+[pid: 24443|app: 0|req: 123/123] 113.87.160.245 () {44 vars in 912 bytes} [Thu Jan 17 17:23:56 2019] GET /app/homepage/0/ => generated 74696 bytes in 80 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 24443|app: 0|req: 124/124] 113.87.160.245 () {42 vars in 851 bytes} [Thu Jan 17 17:23:56 2019] GET /favicon.ico => generated 2065 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Internal Server Error: /app/homepage/0/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 37, in homepage
+    user = User.objects.get(token=token)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: User matching query does not exist.
+[pid: 24443|app: 0|req: 125/125] 113.87.161.170 () {44 vars in 919 bytes} [Thu Jan 17 17:25:26 2019] GET /app/homepage/0/ => generated 74703 bytes in 76 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 126/126] 113.87.161.170 () {44 vars in 908 bytes} [Thu Jan 17 17:25:45 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+Internal Server Error: /app/homepage/0/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 37, in homepage
+    user = User.objects.get(token=token)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: User matching query does not exist.
+[pid: 24443|app: 0|req: 127/127] 113.87.161.170 () {44 vars in 912 bytes} [Thu Jan 17 17:25:45 2019] GET /app/homepage/0/ => generated 74696 bytes in 79 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+Internal Server Error: /app/homepage/0/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 37, in homepage
+    user = User.objects.get(token=token)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: User matching query does not exist.
+[pid: 24443|app: 0|req: 128/128] 113.87.160.245 () {42 vars in 888 bytes} [Thu Jan 17 17:25:45 2019] GET /app/homepage/0/ => generated 74568 bytes in 104 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 24443|app: 0|req: 129/129] 113.87.160.245 () {42 vars in 851 bytes} [Thu Jan 17 17:25:46 2019] GET /favicon.ico => generated 2065 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 130/130] 113.87.160.245 () {44 vars in 808 bytes} [Thu Jan 17 17:26:28 2019] GET /app/homepage/0/ => generated 76591 bytes in 36 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 131/131] 113.87.160.245 () {44 vars in 819 bytes} [Thu Jan 17 17:26:30 2019] GET /app/login/ => generated 3042 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 132/132] 113.87.160.245 () {44 vars in 820 bytes} [Thu Jan 17 17:26:32 2019] GET /app/register/ => generated 3569 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 133/133] 113.87.160.245 () {44 vars in 819 bytes} [Thu Jan 17 17:26:43 2019] GET /app/login/ => generated 3042 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 134/134] 113.87.160.245 () {52 vars in 991 bytes} [Thu Jan 17 17:26:52 2019] POST /app/login/ => generated 3135 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 135/135] 113.87.160.245 () {44 vars in 819 bytes} [Thu Jan 17 17:26:57 2019] GET /app/login/ => generated 3042 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 136/136] 113.87.160.245 () {44 vars in 824 bytes} [Thu Jan 17 17:26:59 2019] GET /app/homepage/0/ => generated 76591 bytes in 37 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 137/137] 113.87.160.245 () {44 vars in 837 bytes} [Thu Jan 17 17:27:05 2019] GET /app/goodsdetail/14/ => generated 15177 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 138/138] 113.87.160.245 () {44 vars in 787 bytes} [Thu Jan 17 17:27:07 2019] GET /app/addshopcar/?goodsid=14 => generated 61 bytes in 1 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 139/139] 113.87.160.245 () {44 vars in 823 bytes} [Thu Jan 17 17:27:07 2019] GET /app/login/ => generated 3042 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 140/140] 113.87.160.245 () {44 vars in 823 bytes} [Thu Jan 17 17:27:10 2019] GET /app/login/ => generated 3042 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 141/141] 113.87.160.245 () {44 vars in 823 bytes} [Thu Jan 17 17:27:15 2019] GET /app/login/ => generated 3042 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 142/142] 113.87.160.245 () {44 vars in 837 bytes} [Thu Jan 17 17:27:22 2019] GET /app/goodsdetail/13/ => generated 15177 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 143/143] 113.87.160.245 () {44 vars in 837 bytes} [Thu Jan 17 17:27:26 2019] GET /app/goodsdetail/16/ => generated 15176 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 144/144] 113.87.160.245 () {44 vars in 837 bytes} [Thu Jan 17 17:27:49 2019] GET /app/goodsdetail2/6/ => generated 15210 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 145/145] 113.87.160.245 () {44 vars in 839 bytes} [Thu Jan 17 17:27:55 2019] GET /app/goodsdetail2/21/ => generated 15210 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 146/146] 113.87.160.245 () {42 vars in 786 bytes} [Thu Jan 17 17:28:26 2019] GET /app/homepage/0/ => generated 76588 bytes in 41 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /
+[pid: 24443|app: 0|req: 147/147] 168.228.164.30 () {32 vars in 452 bytes} [Thu Jan 17 17:28:48 2019] GET / => generated 2017 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /cache/global/img/gs.gif
+[pid: 24443|app: 0|req: 148/148] 80.82.70.187 () {32 vars in 414 bytes} [Thu Jan 17 17:36:17 2019] GET /cache/global/img/gs.gif => generated 2101 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /echo.php
+[pid: 24443|app: 0|req: 149/149] 139.162.88.63 () {32 vars in 401 bytes} [Thu Jan 17 17:41:50 2019] GET /echo.php?info=1234567890 => generated 2077 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 24443|app: 0|req: 150/150] 37.32.46.38 () {32 vars in 449 bytes} [Thu Jan 17 18:10:40 2019] GET / => generated 2017 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Empty python request. skip.
+[pid: 24443|app: -1|req: -1/151]  () {0 vars in 0 bytes} [Thu Jan 17 18:12:48 2019]   => generated 0 bytes in 0 msecs ( 0) 0 headers in 0 bytes (0 switches on core 0)
+Not Found: /.git/config
+[pid: 24443|app: 0|req: 151/152] 89.248.174.141 () {30 vars in 444 bytes} [Thu Jan 17 19:44:22 2019] GET /.git/config => generated 2065 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 152/153] 113.87.161.170 () {42 vars in 775 bytes} [Thu Jan 17 20:03:57 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 153/154] 113.87.161.170 () {42 vars in 779 bytes} [Thu Jan 17 20:03:57 2019] GET /app/homepage/0/ => generated 76588 bytes in 41 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 24443|app: 0|req: 154/155] 113.87.160.245 () {40 vars in 718 bytes} [Thu Jan 17 20:04:04 2019] GET /favicon.ico => generated 2065 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 24443|app: 0|req: 155/156] 177.9.167.31 () {32 vars in 450 bytes} [Thu Jan 17 20:04:42 2019] GET / => generated 2017 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 24443|app: 0|req: 156/157] 113.87.161.170 () {42 vars in 727 bytes} [Thu Jan 17 20:19:46 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 157/158] 113.87.161.170 () {42 vars in 731 bytes} [Thu Jan 17 20:19:46 2019] GET /app/homepage/0/ => generated 76565 bytes in 36 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 158/159] 113.87.161.170 () {44 vars in 773 bytes} [Thu Jan 17 20:19:50 2019] GET /app/login/ => generated 3042 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 159/160] 113.87.160.245 () {48 vars in 885 bytes} [Thu Jan 17 20:19:56 2019] POST /app/login/ => generated 0 bytes in 12 msecs (HTTP/1.1 302) 6 headers in 225 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 160/161] 113.87.161.170 () {44 vars in 818 bytes} [Thu Jan 17 20:19:56 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 161/162] 113.87.160.245 () {44 vars in 822 bytes} [Thu Jan 17 20:19:56 2019] GET /app/homepage/0/ => generated 76575 bytes in 41 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 162/163] 113.87.160.245 () {44 vars in 821 bytes} [Thu Jan 17 20:19:59 2019] GET /app/shopcar/ => generated 9814 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 163/164] 113.87.160.245 () {44 vars in 822 bytes} [Thu Jan 17 20:20:09 2019] GET /app/orderlist/ => generated 11280 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 164/165] 113.87.160.245 () {44 vars in 832 bytes} [Thu Jan 17 20:20:12 2019] GET /app/orderdetail/3/ => generated 9395 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 165/166] 113.87.161.170 () {44 vars in 828 bytes} [Thu Jan 17 20:26:38 2019] GET /app/orderlist/ => generated 11280 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 166/167] 113.87.161.170 () {44 vars in 832 bytes} [Thu Jan 17 20:26:40 2019] GET /app/orderdetail/3/ => generated 9395 bytes in 22 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 167/168] 113.87.161.170 () {44 vars in 832 bytes} [Thu Jan 17 20:26:42 2019] GET /app/orderdetail/4/ => generated 8971 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 168/169] 113.87.161.170 () {44 vars in 828 bytes} [Thu Jan 17 20:26:47 2019] GET /app/orderlist/ => generated 11280 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 169/170] 113.87.161.170 () {44 vars in 820 bytes} [Thu Jan 17 20:26:49 2019] GET /app/shopcar/ => generated 9814 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 170/171] 113.87.161.170 () {44 vars in 822 bytes} [Thu Jan 17 20:27:45 2019] GET /app/orderlist/ => generated 11280 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 171/172] 113.87.161.170 () {44 vars in 832 bytes} [Thu Jan 17 20:27:48 2019] GET /app/orderdetail/3/ => generated 9395 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /
+[pid: 24443|app: 0|req: 172/173] 110.52.28.121 () {28 vars in 288 bytes} [Thu Jan 17 20:33:38 2019] GET / => generated 2014 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 24443|app: 0|req: 173/174] 110.52.29.67 () {28 vars in 287 bytes} [Thu Jan 17 20:35:02 2019] GET / => generated 2014 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 174/175] 113.87.161.170 () {44 vars in 828 bytes} [Thu Jan 17 20:36:27 2019] GET /app/orderlist/ => generated 11280 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 175/176] 113.87.161.170 () {44 vars in 820 bytes} [Thu Jan 17 20:36:29 2019] GET /app/shopcar/ => generated 9814 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /
+[pid: 24443|app: 0|req: 176/177] 191.97.32.2 () {32 vars in 442 bytes} [Thu Jan 17 20:43:09 2019] GET / => generated 2017 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /.git/config
+[pid: 24443|app: 0|req: 177/178] 89.248.174.141 () {30 vars in 444 bytes} [Thu Jan 17 20:45:00 2019] GET /.git/config => generated 2065 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 178/179] 113.87.161.170 () {44 vars in 822 bytes} [Thu Jan 17 20:51:41 2019] GET /app/orderlist/ => generated 11280 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 24443|app: 0|req: 179/180] 113.87.161.170 () {44 vars in 832 bytes} [Thu Jan 17 20:51:43 2019] GET /app/orderdetail/3/ => generated 9395 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /
+[pid: 24443|app: 0|req: 180/181] 92.242.206.99 () {32 vars in 451 bytes} [Thu Jan 17 20:56:11 2019] GET / => generated 2017 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 17 21:15:22 2019] ***
+compiled with version: 5.4.0 20160609 on 17 January 2019 07:09:11
+os: Linux-4.4.0-117-generic #141-Ubuntu SMP Tue Mar 13 11:58:07 UTC 2018
+nodename: oneplace
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Epets
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Epets
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3824
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x1f0f440
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1f0f440 pid: 25221 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 25221, cores: 1)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 17 21:20:24 2019] ***
+compiled with version: 5.4.0 20160609 on 17 January 2019 07:09:11
+os: Linux-4.4.0-117-generic #141-Ubuntu SMP Tue Mar 13 11:58:07 UTC 2018
+nodename: oneplace
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Epets
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Epets
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3824
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x15d6440
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x15d6440 pid: 25546 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 25546, cores: 1)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 17 21:48:44 2019] ***
+compiled with version: 5.4.0 20160609 on 17 January 2019 07:09:11
+os: Linux-4.4.0-117-generic #141-Ubuntu SMP Tue Mar 13 11:58:07 UTC 2018
+nodename: oneplace
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Epets
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Epets
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3824
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x1d6b440
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1d6b440 pid: 26060 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 26060, cores: 1)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 17 21:51:45 2019] ***
+compiled with version: 5.4.0 20160609 on 17 January 2019 07:09:11
+os: Linux-4.4.0-117-generic #141-Ubuntu SMP Tue Mar 13 11:58:07 UTC 2018
+nodename: oneplace
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Epets
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Epets
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3824
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x1223440
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1223440 pid: 26117 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 26117, cores: 1)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 26117|app: 0|req: 1/1] 113.87.160.245 () {42 vars in 727 bytes} [Thu Jan 17 21:52:15 2019] GET /app/homepage/ => generated 0 bytes in 176 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 26117|app: 0|req: 2/2] 113.87.160.245 () {42 vars in 731 bytes} [Thu Jan 17 21:52:15 2019] GET /app/homepage/0/ => generated 76565 bytes in 47 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 26117|app: 0|req: 3/3] 113.87.160.245 () {44 vars in 773 bytes} [Thu Jan 17 21:52:18 2019] GET /app/login/ => generated 3042 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 26117|app: 0|req: 4/4] 113.87.160.245 () {48 vars in 885 bytes} [Thu Jan 17 21:52:24 2019] POST /app/login/ => generated 0 bytes in 14 msecs (HTTP/1.1 302) 6 headers in 225 bytes (1 switches on core 0)
+[pid: 26117|app: 0|req: 5/5] 113.87.161.170 () {44 vars in 818 bytes} [Thu Jan 17 21:52:24 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 26117|app: 0|req: 6/6] 113.87.160.245 () {44 vars in 822 bytes} [Thu Jan 17 21:52:24 2019] GET /app/homepage/0/ => generated 76575 bytes in 46 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 26117|app: 0|req: 7/7] 113.87.160.245 () {44 vars in 821 bytes} [Thu Jan 17 21:52:27 2019] GET /app/shopcar/ => generated 9814 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 26117|app: 0|req: 8/8] 113.87.160.245 () {44 vars in 822 bytes} [Thu Jan 17 21:52:30 2019] GET /app/orderlist/ => generated 11280 bytes in 30 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 26117|app: 0|req: 9/9] 113.87.160.245 () {44 vars in 832 bytes} [Thu Jan 17 21:52:31 2019] GET /app/orderdetail/3/ => generated 9478 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 17 21:54:22 2019] ***
+compiled with version: 5.4.0 20160609 on 17 January 2019 07:09:11
+os: Linux-4.4.0-117-generic #141-Ubuntu SMP Tue Mar 13 11:58:07 UTC 2018
+nodename: oneplace
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Epets
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Epets
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3824
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x16c3440
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x16c3440 pid: 26158 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 26158, cores: 1)
+[pid: 26158|app: 0|req: 1/1] 113.87.160.245 () {44 vars in 812 bytes} [Thu Jan 17 21:54:44 2019] GET /app/orderdetail/3/ => generated 9478 bytes in 216 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 17 21:58:22 2019] ***
+compiled with version: 5.4.0 20160609 on 17 January 2019 07:09:11
+os: Linux-4.4.0-117-generic #141-Ubuntu SMP Tue Mar 13 11:58:07 UTC 2018
+nodename: oneplace
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Epets
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Epets
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3824
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x1b9a450
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1b9a450 pid: 26354 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 26354, cores: 1)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+Not Found: /hom
+[pid: 26354|app: 0|req: 1/1] 113.87.160.245 () {42 vars in 707 bytes} [Thu Jan 17 21:58:39 2019] GET /hom => generated 2041 bytes in 189 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 26354|app: 0|req: 2/2] 113.87.160.245 () {40 vars in 688 bytes} [Thu Jan 17 21:58:39 2019] GET /favicon.ico => generated 2065 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 26354|app: 0|req: 3/3] 113.87.161.170 () {42 vars in 727 bytes} [Thu Jan 17 21:58:45 2019] GET /app/homepage/ => generated 0 bytes in 8 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 26354|app: 0|req: 4/4] 113.87.161.170 () {42 vars in 731 bytes} [Thu Jan 17 21:58:45 2019] GET /app/homepage/0/ => generated 76565 bytes in 48 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 26354|app: 0|req: 5/5] 113.87.160.245 () {44 vars in 773 bytes} [Thu Jan 17 21:58:47 2019] GET /app/login/ => generated 3042 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 26354|app: 0|req: 6/6] 113.87.161.170 () {48 vars in 885 bytes} [Thu Jan 17 21:58:56 2019] POST /app/login/ => generated 0 bytes in 15 msecs (HTTP/1.1 302) 6 headers in 225 bytes (1 switches on core 0)
+[pid: 26354|app: 0|req: 7/7] 113.87.160.245 () {44 vars in 818 bytes} [Thu Jan 17 21:58:56 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 26354|app: 0|req: 8/8] 113.87.161.170 () {44 vars in 822 bytes} [Thu Jan 17 21:58:56 2019] GET /app/homepage/0/ => generated 76575 bytes in 40 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 26354|app: 0|req: 9/9] 113.87.161.170 () {44 vars in 821 bytes} [Thu Jan 17 21:58:59 2019] GET /app/shopcar/ => generated 9814 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 26354|app: 0|req: 10/10] 113.87.161.170 () {44 vars in 822 bytes} [Thu Jan 17 21:59:01 2019] GET /app/orderlist/ => generated 11280 bytes in 30 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 26354|app: 0|req: 11/11] 113.87.161.170 () {44 vars in 832 bytes} [Thu Jan 17 21:59:03 2019] GET /app/orderdetail/3/ => generated 9462 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 17 22:00:51 2019] ***
+compiled with version: 5.4.0 20160609 on 17 January 2019 07:09:11
+os: Linux-4.4.0-117-generic #141-Ubuntu SMP Tue Mar 13 11:58:07 UTC 2018
+nodename: oneplace
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Epets
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Epets
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3824
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x152d450
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x152d450 pid: 26386 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 26386, cores: 1)
+[pid: 26386|app: 0|req: 1/1] 113.87.160.245 () {46 vars in 863 bytes} [Thu Jan 17 22:00:54 2019] GET /app/orderdetail/3/ => generated 9521 bytes in 303 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 17 22:01:59 2019] ***
+compiled with version: 5.4.0 20160609 on 17 January 2019 07:09:11
+os: Linux-4.4.0-117-generic #141-Ubuntu SMP Tue Mar 13 11:58:07 UTC 2018
+nodename: oneplace
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Epets
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Epets
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3824
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x10ee450
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x10ee450 pid: 26426 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 26426, cores: 1)
+[pid: 26426|app: 0|req: 1/1] 113.87.160.245 () {46 vars in 863 bytes} [Thu Jan 17 22:02:04 2019] GET /app/orderdetail/3/ => generated 9544 bytes in 230 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 2/2] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:14 2019] GET /app/pay/ => generated 12377 bytes in 21 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 3/3] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:15 2019] GET /app/pay/ => generated 12377 bytes in 19 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 4/4] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:16 2019] GET /app/pay/ => generated 12377 bytes in 21 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 5/5] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:16 2019] GET /app/pay/ => generated 12377 bytes in 20 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 6/6] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:16 2019] GET /app/pay/ => generated 12377 bytes in 19 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 7/7] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:16 2019] GET /app/pay/ => generated 12377 bytes in 21 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 8/8] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:17 2019] GET /app/pay/ => generated 12377 bytes in 20 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 9/9] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:17 2019] GET /app/pay/ => generated 12377 bytes in 20 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 10/10] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:17 2019] GET /app/pay/ => generated 12377 bytes in 20 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 11/11] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:17 2019] GET /app/pay/ => generated 12377 bytes in 18 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 12/12] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:18 2019] GET /app/pay/ => generated 12377 bytes in 20 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 13/13] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:18 2019] GET /app/pay/ => generated 12377 bytes in 19 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 14/14] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:18 2019] GET /app/pay/ => generated 12377 bytes in 19 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 15/15] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:18 2019] GET /app/pay/ => generated 12377 bytes in 21 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 16/16] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:18 2019] GET /app/pay/ => generated 12377 bytes in 20 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 17/17] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:19 2019] GET /app/pay/ => generated 12377 bytes in 19 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /app/pay/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 383, in pay
+    out_trade_no=Order.objects.get(pk=orderid).identifier,
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/python3/lib/python3.5/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Order matching query does not exist.
+[pid: 26426|app: 0|req: 18/18] 113.87.160.245 () {44 vars in 760 bytes} [Thu Jan 17 22:02:19 2019] GET /app/pay/ => generated 12377 bytes in 20 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 17 22:05:56 2019] ***
+compiled with version: 5.4.0 20160609 on 17 January 2019 07:09:11
+os: Linux-4.4.0-117-generic #141-Ubuntu SMP Tue Mar 13 11:58:07 UTC 2018
+nodename: oneplace
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Epets
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/python3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Epets
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3824
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x1b11450
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1b11450 pid: 26466 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 26466, cores: 1)
+[pid: 26466|app: 0|req: 1/1] 113.87.160.245 () {46 vars in 863 bytes} [Thu Jan 17 22:06:07 2019] GET /app/orderdetail/3/ => generated 9530 bytes in 240 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 26466|app: 0|req: 2/2] 113.87.160.245 () {44 vars in 779 bytes} [Thu Jan 17 22:06:10 2019] GET /app/pay/?orderid=3 => generated 902 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 101 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 26466|app: 0|req: 3/3] 191.96.110.1 () {30 vars in 357 bytes} [Thu Jan 17 22:27:46 2019] GET / => generated 55437 bytes in 57 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 26466|app: 0|req: 4/4] 113.110.230.97 () {40 vars in 751 bytes} [Thu Jan 17 22:29:30 2019] GET /app/homepage/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 26466|app: 0|req: 5/5] 113.110.230.97 () {40 vars in 755 bytes} [Thu Jan 17 22:29:30 2019] GET /app/homepage/0/ => generated 76588 bytes in 36 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 26466|app: 0|req: 6/6] 113.110.230.97 () {40 vars in 718 bytes} [Thu Jan 17 22:29:31 2019] GET /favicon.ico => generated 2065 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 26466|app: 0|req: 7/7] 113.110.230.97 () {42 vars in 797 bytes} [Thu Jan 17 22:29:35 2019] GET /app/login/ => generated 3042 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 26466|app: 0|req: 8/8] 113.110.230.97 () {52 vars in 1064 bytes} [Thu Jan 17 22:29:43 2019] POST /app/login/ => generated 0 bytes in 12 msecs (HTTP/1.1 302) 6 headers in 225 bytes (1 switches on core 0)
+[pid: 26466|app: 0|req: 9/9] 113.110.230.97 () {46 vars in 962 bytes} [Thu Jan 17 22:29:43 2019] GET /app/homepage/ => generated 0 bytes in 0 msecs (HTTP/1.1 302) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 26466|app: 0|req: 10/10] 113.110.230.97 () {46 vars in 966 bytes} [Thu Jan 17 22:29:43 2019] GET /app/homepage/0/ => generated 76598 bytes in 46 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 26466|app: 0|req: 11/11] 113.110.230.97 () {44 vars in 938 bytes} [Thu Jan 17 22:29:47 2019] GET /app/orderlist/ => generated 11280 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 26466|app: 0|req: 12/12] 113.110.230.97 () {44 vars in 945 bytes} [Thu Jan 17 22:29:52 2019] GET /app/orderdetail/4/ => generated 9106 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 26466|app: 0|req: 13/13] 113.110.230.97 () {44 vars in 870 bytes} [Thu Jan 17 22:29:56 2019] GET /app/pay/?orderid=4 => generated 901 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 101 bytes (1 switches on core 0)
+Not Found: /app/notify/
+[pid: 26466|app: 0|req: 14/14] 140.205.118.220 () {34 vars in 491 bytes} [Thu Jan 17 22:34:45 2019] POST /app/notify/ => generated 5264 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 26466|app: 0|req: 15/15] 113.110.230.97 () {44 vars in 2398 bytes} [Thu Jan 17 22:34:56 2019] GET /app/returnview/?charset=utf-8&out_trade_no=989515476269637058&method=alipay.trade.page.pay.return&total_amount=50.00&sign=std9IavhJq5JWH3N3QNlJIRB4pNHrdpKDMc4jHgCMdaV%2FDRHyhek0c%2FmFM7M1ucFJTI8JNtASF8zkMfJWGbL8N2o30WJHexup2CUiswv7MBwM5yQMtS1GX6SqE23wxJguBGupA673IwfCBwBDlu7wsWKZzcaCLrM%2FC6EYF%2FgzoHXBAT8xnC%2FJmozsvQxbLCLUiRLatMZ8NUBJtSLtXeQz9clkYViCukJF9F1gtlmKzAFTrIHHJcMHd0F7Vu2UMclk6U7bn9P%2BymCuFYkKbn9PTN1RBUcjuugUIGTUJaALg7JmlC5m7abij4DNDAoCPhdruo3SHeQPIdo1aLvpUivfA%3D%3D&trade_no=2019011722001453350500706384&auth_app_id=2016092500591339&version=1.0&app_id=2016092500591339&sign_type=RSA2&seller_id=2088102177171997&timestamp=2019-01-17+22%3A34%3A53 => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 141 bytes (1 switches on core 0)
+[pid: 26466|app: 0|req: 16/16] 113.110.230.97 () {44 vars in 1113 bytes} [Thu Jan 17 22:34:56 2019] GET /app/orderdetail/3/ => generated 9530 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
